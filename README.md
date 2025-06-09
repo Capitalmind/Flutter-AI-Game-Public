@@ -66,6 +66,15 @@ The simulation features **10 distinct AI personalities**, each modeling differen
 - **Rule-Based AI**: 10 personality-driven trading algorithms
 - **Decision Trees**: Complex conditional logic for buy/sell decisions
 - **Risk Management**: Dynamic cash reserve and position sizing
+- **🎯 Comprehensive ML Recording System**: Complete data capture for training datasets
+
+### **🎬 ML Data Recording Capabilities**
+- **Complete Game Observability**: Every action, event, and decision captured
+- **Real-Time Data Export**: JSON datasets with full game state snapshots
+- **Comprehensive Event Logging**: Dice rolls, trades, market events, dividends, bankruptcies
+- **AI Decision Tracking**: Personality-based reasoning for every trade decision
+- **Performance Metrics**: Round counting, timing, success rates, risk events
+- **Research-Ready Datasets**: Standardized notation perfect for ML training
 
 ### **Future ML Extensions**
 - **Reinforcement Learning**: Train agents using Q-learning or policy gradients
@@ -87,6 +96,8 @@ The simulation features **10 distinct AI personalities**, each modeling differen
 - ✅ **Comprehensive Logging**: Detailed action history for analysis
 - ✅ **Configurable Speed**: From 0.125s to 5s per turn for different testing needs
 - ✅ **Multi-Company Support**: 3-6 players with dynamic personality assignment
+- ✅ **🎯 ML Recording System**: Complete data capture with export capabilities
+- ✅ **Research Analytics**: Live statistics, comprehensive reports, performance tracking
 
 ## 📈 **Research Applications**
 
@@ -117,10 +128,13 @@ The simulation features **10 distinct AI personalities**, each modeling differen
 - **Decision Framework**: Extensible logic for complex trading decisions
 - **Performance Tracking**: Built-in metrics for strategy evaluation
 
-### **Data Management**
+### **Data Management & ML Recording**
 - **Game State Persistence**: Complete game state tracking
 - **Action Logging**: Detailed history for post-game analysis
 - **Export Capabilities**: Data extraction for external analysis tools
+- **🎯 ML Dataset Generation**: Automatic capture of all game events and decisions
+- **Real-Time Analytics**: Live statistics and comprehensive reporting
+- **Research-Ready Output**: JSON datasets with standardized notation for ML training
 
 ## 🎯 **Getting Started**
 
