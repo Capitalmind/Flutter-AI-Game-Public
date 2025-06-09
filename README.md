@@ -161,7 +161,7 @@ The Flutter simulation bridges the gap between theoretical finance and practical
 
 <div align="center">
 
-**"Flutter" - Where 1966 meets 2024, and traditional game theory meets modern machine learning.**
+**"Flutter" - Where 1966 meets 2025, and traditional game theory meets modern machine learning.**
 
 *This project demonstrates how classic board games can serve as sophisticated platforms for AI research and financial algorithm development.*
 
@@ -169,7 +169,9 @@ The Flutter simulation bridges the gap between theoretical finance and practical
 
 ## 📄 **License**
 
-This project is based on the 1966 "Flutter - Stock Exchange Game" by J.W. Spear & Sons. The digital implementation is created for educational and research purposes.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+**Historical Note**: Based on the 1966 "Flutter - Stock Exchange Game" by J.W. Spear & Sons. This digital implementation is created for educational and research purposes.
 
 ## 🤝 **Contributing**
 
