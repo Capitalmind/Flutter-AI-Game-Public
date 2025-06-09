@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flutterGameRules version="1.2">
+  <metadata>
+    <title>Flutter - The Stock Exchange Game (Spears 1971)</title>
+    <players min="3" max="8"/>
+    <playTime average="60" unit="minutes"/>
+    <objective>Accumulate the most wealth (cash + market value of shares) and reach the winning threshold before other players.</objective>
+  </metadata>
+
+  <components>
+    <cards>
+      <marketNews total="24">
+        <note>22 unique cards, 2 Anti-Slump Insurance duplicates, recirculated after use</note>
+      </marketNews>
+    </cards>
+    <stockCertificates perPlayer="6">
+      <note>Each certificate represents 100 shares. Broker holds one certificate per company per player.</note>
+    </stockCertificates>
+    <currency>
+      <denomination value="100" quantity="2"/>
+      <denomination value="50" quantity="1"/>
+      <denomination value="20" quantity="1"/>
+      <denomination value="10" quantity="1"/>
+      <denomination value="5" quantity="2"/>
+    </currency>
+    <stocks count="6">
+      <stock name="Captivating Cosmetics Ltd." color="white"/>
+      <stock name="(Add other five companies as per board colors)" color="TBD"/>
+    </stocks>
+    <pegs>
+      <peg type="Parent" function="Tracks market value"/>
+      <peg type="Traveller" function="Determines dividend and share movement each round"/>
+    </pegs>
+  </components>
+
+  <setup>
+    <step>Each player receives exactly £300 in cash: 2×£100, 1×£50, 1×£20, 1×£10, 2×£5 denominations.</step>
+    <step>No player starts with any shares.</step>
+    <step>The broker holds 6 companies × number of players = number of share certificates (each 100 shares).</step>
+    <step>The broker shuffles the 24 Market News cards and places them face down. They are recycled after use.</step>
+    <step>The board is prepared by placing all parent pegs at the PAR 100 line. Traveller pegs are stacked on top.</step>
+    <step>The first player is determined by high roll of numbered die. Play proceeds clockwise.</step>
+  </setup>
+
+  <!-- The rest of the XML rules remain as-is until updated per additional rules -->
+</flutterGameRules>

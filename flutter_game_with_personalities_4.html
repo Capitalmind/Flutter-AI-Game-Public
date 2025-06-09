@@ -1,0 +1,2701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutter - Stock Trading Game (Spears 1966) - AI Personalities</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: auto;
+        }
+
+        .game-container {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            grid-template-rows: auto 1fr;
+            min-height: 100vh;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .header {
+            grid-column: 1 / -1;
+            text-align: center;
+            background: rgba(255, 215, 0, 0.1);
+            border: 3px solid gold;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            color: gold;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .header .subtitle {
+            color: #e2e8f0;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        .main-board {
+            background: #1a1a2e;
+            border: 4px solid #2d3748;
+            border-radius: 15px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .board-title {
+            text-align: center;
+            color: #fbbf24;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .flutter-board {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2px;
+            background: #0f172a;
+            border: 3px solid #374151;
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .lane-header {
+            grid-row: 1;
+            text-align: center;
+            font-weight: bold;
+            padding: 10px 5px;
+            border-radius: 8px 8px 0 0;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            font-size: 0.9rem;
+        }
+
+        .yellow-lane { background: linear-gradient(135deg, #fbbf24, #f59e0b); }
+        .red-lane { background: linear-gradient(135deg, #ef4444, #dc2626); }
+        .blue-lane { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+        .price-column { background: linear-gradient(135deg, #f8fafc, #e2e8f0); color: #1f2937; font-weight: bold; }
+        .green-lane { background: linear-gradient(135deg, #10b981, #059669); }
+        .black-lane { background: linear-gradient(135deg, #374151, #1f2937); }
+        .white-lane { background: linear-gradient(135deg, #f8fafc, #e2e8f0); color: #1f2937; }
+
+        .board-cell {
+            min-height: 45px;
+            border: 1px solid rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        .price-cell {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            color: #1f2937;
+            font-weight: bold;
+            font-size: 1rem;
+            border: 2px solid #6b7280;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .bankrupt-cell {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+            font-weight: bold;
+        }
+
+        .market-news-cell {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            color: white;
+            font-weight: bold;
+        }
+
+        .price-cell.market-news {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            color: white;
+            font-weight: bold;
+            font-size: 0.85rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px;
+        }
+
+        .payout-cell {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            font-weight: bold;
+        }
+
+        .slump-cell {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+            font-weight: bold;
+        }
+
+        .player-peg {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            transform: translate(0, -50%);
+            z-index: 12;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            cursor: pointer;
+        }
+
+        .traveler-peg {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 2px solid #000;
+            position: absolute;
+            top: 50%;
+            right: 15%;
+            transform: translate(0, -50%);
+            z-index: 15;
+            background: #fff;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            font-weight: bold;
+            color: #000;
+            cursor: pointer;
+        }
+
+        .traveler-peg.special-cell {
+            width: 20px;
+            height: 20px;
+            border: 3px solid #ff0000;
+            background: #ffffff;
+            color: #000000;
+            font-weight: bold;
+            z-index: 15;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+            animation: pulse 2s infinite;
+        }
+
+        .player-peg.special-cell {
+            border: 3px solid #ffffff;
+            font-weight: bold;
+            z-index: 14;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        }
+
+        @keyframes pulse {
+            0% { transform: translate(0, -50%) scale(1); }
+            50% { transform: translate(0, -50%) scale(1.1); }
+            100% { transform: translate(0, -50%) scale(1); }
+        }
+
+        .peg-yellow { background: #f59e0b; }
+        .peg-red { background: #dc2626; }
+        .peg-blue { background: #2563eb; }
+        .peg-green { background: #059669; }
+        .peg-black { background: #1f2937; }
+        .peg-white { background: #f8fafc; color: #000; }
+
+        .current-prices {
+            background: rgba(0,0,0,0.8);
+            border: 2px solid #fbbf24;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .current-prices h3 {
+            color: #fbbf24;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 3px;
+            transition: all 0.2s ease;
+        }
+
+        .price-row:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .price-row.disabled {
+            opacity: 0.4;
+            background: rgba(255, 0, 0, 0.1);
+        }
+
+        .price-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+            border: 1px solid #fff;
+            margin-right: 8px;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background: rgba(0,0,0,0.3);
+            border: 2px solid #4b5563;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .dice-section {
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+            border: 2px solid #a855f7;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .dice-section h3 {
+            color: #fbbf24;
+            margin-bottom: 15px;
+        }
+
+        .dice-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 15px;
+        }
+
+        .dice {
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            border: 2px solid #374151;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1f2937;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .color-dice {
+            width: 50px;
+            height: 50px;
+            border: 3px solid #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .roll-btn {
+            background: #fbbf24;
+            color: #1f2937;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .roll-btn:hover {
+            background: #f59e0b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
+        }
+
+        .players-section {
+            background: linear-gradient(135deg, #059669, #047857);
+            border: 2px solid #10b981;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .players-section h3 {
+            color: #fbbf24;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .player-info {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .player-info:hover {
+            background: rgba(0,0,0,0.5);
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .player-info.current-player {
+            border-color: #fbbf24;
+            background: rgba(251, 191, 36, 0.1);
+        }
+
+        .player-info.winning-player {
+            border-color: #10b981;
+            background: rgba(16, 185, 129, 0.15);
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+        }
+
+        .player-info.near-win {
+            border-color: #f59e0b;
+            background: rgba(245, 158, 11, 0.1);
+        }
+
+        .player-info.disabled {
+            opacity: 0.4;
+            background: rgba(255,0,0,0.1);
+            border-color: rgba(255,0,0,0.3);
+        }
+
+        .player-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .player-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+
+        .player-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+            font-size: 0.85rem;
+        }
+
+        .personality-indicator {
+            font-size: 0.7rem;
+            color: #a855f7;
+            font-style: italic;
+            margin-top: 2px;
+        }
+
+        .share-holdings {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .holdings-title {
+            font-size: 0.75rem;
+            color: #d1d5db;
+            margin-bottom: 4px;
+        }
+
+        .holdings-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .share-box {
+            width: 24px;
+            height: 20px;
+            border-radius: 4px;
+            border: 1px solid #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .share-box:hover {
+            transform: scale(1.1);
+        }
+
+        .no-holdings {
+            font-size: 0.7rem;
+            color: #9ca3af;
+            font-style: italic;
+        }
+
+        .market-news-section {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            border: 2px solid #a855f7;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .market-news-section h3 {
+            color: #fbbf24;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .current-card {
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            line-height: 1.3;
+        }
+
+        .draw-card-btn {
+            background: #8b5cf6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .draw-card-btn:hover {
+            background: #7c3aed;
+            transform: translateY(-2px);
+        }
+
+        .game-controls {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            border: 2px solid #f87171;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .game-controls h3 {
+            color: #fbbf24;
+            margin-bottom: 15px;
+        }
+
+        .control-btn {
+            background: #1f2937;
+            color: #fff;
+            border: 1px solid #4b5563;
+            padding: 8px 16px;
+            border-radius: 6px;
+            margin: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.8rem;
+        }
+
+        .control-btn:hover {
+            background: #374151;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 1200px) {
+            .game-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+            }
+            
+            .flutter-board {
+                grid-template-columns: 30px repeat(7, 1fr) 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .flutter-board {
+                grid-template-columns: 25px repeat(7, 1fr) 25px;
+            }
+            
+            .board-cell {
+                min-height: 35px;
+                font-size: 0.7rem;
+            }
+            
+            .player-peg {
+                width: 20px;
+                height: 20px;
+                font-size: 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>Flutter - Stock Trading Game</h1>
+            <div class="subtitle">J.W. Spear & Sons Ltd 1966 • "AI Personality Trading System!"</div>
+        </div>
+
+        <div class="main-board">
+            <div class="board-title">🎲 Flutter Game Board</div>
+            
+            <div class="current-prices">
+                <h3>Company Stock Positions</h3>
+                <div id="company-prices"></div>
+            </div>
+
+            <div class="flutter-board" id="game-board">
+                <!-- All board cells including headers are generated dynamically -->
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="dice-section">
+                <h3>🎮 Game Controls</h3>
+                <div class="dice-container">
+                    <div class="dice" id="number-dice">6</div>
+                    <div class="color-dice yellow-lane" id="color-dice"></div>
+                </div>
+                <button class="roll-btn" id="roll-btn" onclick="rollDice()">🎲 Roll Dice</button>
+                <button class="roll-btn" id="play-pause-btn" onclick="toggleAutoPlay()" style="margin-top: 10px;">▶️ Auto Play</button>
+                <div style="margin-top: 10px; font-size: 0.9rem;">
+                    <div>Speed: <input type="range" id="speed-slider" min="125" max="5000" value="1500" oninput="updateAutoPlaySpeed()" style="width: 120px;"> <span id="speed-display">1.5s</span></div>
+                    <div style="font-size: 0.7rem; color: #a0a0a0; margin-top: 2px;">Range: 0.125s (very fast) to 5s (very slow)</div>
+                    <div>Last: <span id="last-number">6</span> | <span id="last-color">Yellow</span></div>
+                </div>
+            </div>
+
+            <div class="players-section">
+                <h3>👥 Company Players (<span id="player-count">4</span>)</h3>
+                <div id="player-list"></div>
+            </div>
+
+            <div class="market-news-section">
+                <h3>📰 Market News</h3>
+                <div class="current-card" id="current-card">
+                    <strong>Welcome to Flutter!</strong><br>
+                    AI personalities randomly assigned<br>
+                    Roll the dice to start trading
+                </div>
+                <button class="draw-card-btn" onclick="drawMarketCard()">Draw Market News Card</button>
+                <div style="margin-top: 10px; font-size: 0.85rem; text-align: center;">
+                    Cards remaining: <span id="cards-remaining">22</span><br>
+                    Insurance cards: <span id="insurance-remaining">2</span>
+                </div>
+            </div>
+
+            <div class="game-controls">
+                <h3>📝 Game Console</h3>
+                <div id="game-console" style="background: #000; color: #0f0; font-family: 'Courier New', monospace; font-size: 0.8rem; height: 150px; overflow-y: auto; padding: 10px; border-radius: 5px; border: 1px solid #333;">
+                    <div>Flutter Game Console v5.0 - AI Personalities</div>
+                    <div>Loading personality system...</div>
+                </div>
+                <div style="margin-top: 10px;">
+                    <button class="control-btn" onclick="clearConsole()">Clear Log</button>
+                    <button class="control-btn" onclick="newGame()">New Game</button>
+                    <button class="control-btn" onclick="showPersonalities()">Show AI Types</button>
+                    <button class="control-btn" onclick="buyShares()">Buy Shares</button>
+                    <button class="control-btn" onclick="sellShares()">Sell Shares</button>
+                </div>
+                <div style="margin-top: 10px; font-size: 0.8rem; text-align: center;">
+                    Target: £<span id="win-target">600</span> | Turn: <span id="current-player-name">Yellow</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // AI Personality System Configuration
+        const AI_PERSONALITIES = {
+            "conservativeInvestor": {
+                "name": "Conservative Investor",
+                "description": "Focuses on capital preservation with steady, low-risk growth",
+                "riskTolerance": 0.3,
+                "aggressiveness": 0.2,
+                "diversificationPreference": 0.8,
+                "cashReserveTarget": 0.4,
+                "tradingFrequency": 0.4,
+                "priceThresholds": {
+                    "buyBelow": 90,
+                    "sellAbove": 150,
+                    "panicSellAt": 180,
+                    "bargainBuyAt": 70
+                },
+                "dividendFocus": 0.8,
+                "momentumTrading": 0.1,
+                "contrarian": 0.2,
+                "maxPositionSize": 0.3,
+                "stopLossThreshold": 0.15,
+                "emoji": "🛡️"
+            },
+            
+            "aggressiveSpeculator": {
+                "name": "Aggressive Speculator", 
+                "description": "High-risk, high-reward momentum trader seeking maximum returns",
+                "riskTolerance": 0.9,
+                "aggressiveness": 0.9,
+                "diversificationPreference": 0.2,
+                "cashReserveTarget": 0.05,
+                "tradingFrequency": 0.9,
+                "priceThresholds": {
+                    "buyBelow": 130,
+                    "sellAbove": 190,
+                    "panicSellAt": 200,
+                    "bargainBuyAt": 100
+                },
+                "dividendFocus": 0.3,
+                "momentumTrading": 0.9,
+                "contrarian": 0.1,
+                "maxPositionSize": 0.6,
+                "stopLossThreshold": 0.25,
+                "emoji": "🚀"
+            },
+            
+            "balancedTrader": {
+                "name": "Balanced Trader",
+                "description": "Moderate risk with balanced approach to growth and income",
+                "riskTolerance": 0.5,
+                "aggressiveness": 0.5,
+                "diversificationPreference": 0.6,
+                "cashReserveTarget": 0.25,
+                "tradingFrequency": 0.6,
+                "priceThresholds": {
+                    "buyBelow": 110,
+                    "sellAbove": 170,
+                    "panicSellAt": 185,
+                    "bargainBuyAt": 85
+                },
+                "dividendFocus": 0.6,
+                "momentumTrading": 0.5,
+                "contrarian": 0.3,
+                "maxPositionSize": 0.4,
+                "stopLossThreshold": 0.2,
+                "emoji": "⚖️"
+            },
+            
+            "contrarian": {
+                "name": "Contrarian Investor",
+                "description": "Buys when others sell, sells when others buy - opposite of crowd",
+                "riskTolerance": 0.7,
+                "aggressiveness": 0.6,
+                "diversificationPreference": 0.5,
+                "cashReserveTarget": 0.3,
+                "tradingFrequency": 0.5,
+                "priceThresholds": {
+                    "buyBelow": 80,
+                    "sellAbove": 160,
+                    "panicSellAt": 50,
+                    "bargainBuyAt": 60
+                },
+                "dividendFocus": 0.4,
+                "momentumTrading": 0.2,
+                "contrarian": 0.9,
+                "maxPositionSize": 0.5,
+                "stopLossThreshold": 0.1,
+                "emoji": "🔄"
+            },
+            
+            "dividendHunter": {
+                "name": "Dividend Hunter",
+                "description": "Income-focused strategy targeting dividend-paying opportunities",
+                "riskTolerance": 0.4,
+                "aggressiveness": 0.3,
+                "diversificationPreference": 0.7,
+                "cashReserveTarget": 0.2,
+                "tradingFrequency": 0.4,
+                "priceThresholds": {
+                    "buyBelow": 110,
+                    "sellAbove": 170,
+                    "panicSellAt": 180,
+                    "bargainBuyAt": 90
+                },
+                "dividendFocus": 0.9,
+                "momentumTrading": 0.2,
+                "contrarian": 0.3,
+                "maxPositionSize": 0.35,
+                "stopLossThreshold": 0.12,
+                "emoji": "💰"
+            },
+            
+            "growthInvestor": {
+                "name": "Growth Investor",
+                "description": "Focuses on companies with high growth potential, less concerned with dividends",
+                "riskTolerance": 0.7,
+                "aggressiveness": 0.7,
+                "diversificationPreference": 0.4,
+                "cashReserveTarget": 0.15,
+                "tradingFrequency": 0.7,
+                "priceThresholds": {
+                    "buyBelow": 120,
+                    "sellAbove": 190,
+                    "panicSellAt": 195,
+                    "bargainBuyAt": 95
+                },
+                "dividendFocus": 0.2,
+                "momentumTrading": 0.7,
+                "contrarian": 0.2,
+                "maxPositionSize": 0.5,
+                "stopLossThreshold": 0.22,
+                "emoji": "📈"
+            },
+            
+            "dayTrader": {
+                "name": "Day Trader",
+                "description": "Extremely active trader making frequent small-profit trades",
+                "riskTolerance": 0.8,
+                "aggressiveness": 0.95,
+                "diversificationPreference": 0.1,
+                "cashReserveTarget": 0.1,
+                "tradingFrequency": 0.95,
+                "priceThresholds": {
+                    "buyBelow": 140,
+                    "sellAbove": 160,
+                    "panicSellAt": 195,
+                    "bargainBuyAt": 110
+                },
+                "dividendFocus": 0.1,
+                "momentumTrading": 0.95,
+                "contrarian": 0.05,
+                "maxPositionSize": 0.7,
+                "stopLossThreshold": 0.08,
+                "emoji": "⚡"
+            },
+            
+            "valueInvestor": {
+                "name": "Value Investor",
+                "description": "Patient investor seeking undervalued companies at discount prices",
+                "riskTolerance": 0.4,
+                "aggressiveness": 0.2,
+                "diversificationPreference": 0.6,
+                "cashReserveTarget": 0.35,
+                "tradingFrequency": 0.3,
+                "priceThresholds": {
+                    "buyBelow": 80,
+                    "sellAbove": 180,
+                    "panicSellAt": 190,
+                    "bargainBuyAt": 60
+                },
+                "dividendFocus": 0.7,
+                "momentumTrading": 0.1,
+                "contrarian": 0.6,
+                "maxPositionSize": 0.45,
+                "stopLossThreshold": 0.05,
+                "emoji": "💎"
+            },
+            
+            "trendFollower": {
+                "name": "Trend Follower",
+                "description": "Follows market momentum and popular trends",
+                "riskTolerance": 0.6,
+                "aggressiveness": 0.8,
+                "diversificationPreference": 0.3,
+                "cashReserveTarget": 0.15,
+                "tradingFrequency": 0.8,
+                "priceThresholds": {
+                    "buyBelow": 130,
+                    "sellAbove": 180,
+                    "panicSellAt": 185,
+                    "bargainBuyAt": 105
+                },
+                "dividendFocus": 0.3,
+                "momentumTrading": 0.85,
+                "contrarian": 0.1,
+                "maxPositionSize": 0.55,
+                "stopLossThreshold": 0.18,
+                "emoji": "🌊"
+            },
+            
+            "opportunist": {
+                "name": "Opportunist",
+                "description": "Adapts strategy based on market conditions and opportunities",
+                "riskTolerance": 0.6,
+                "aggressiveness": 0.6,
+                "diversificationPreference": 0.5,
+                "cashReserveTarget": 0.2,
+                "tradingFrequency": 0.7,
+                "priceThresholds": {
+                    "buyBelow": 115,
+                    "sellAbove": 175,
+                    "panicSellAt": 190,
+                    "bargainBuyAt": 85
+                },
+                "dividendFocus": 0.5,
+                "momentumTrading": 0.6,
+                "contrarian": 0.4,
+                "maxPositionSize": 0.4,
+                "stopLossThreshold": 0.15,
+                "emoji": "🎯"
+            }
+        };
+
+        // Game data (inline for artifact compatibility)
+        const GAME_DATA = {
+            "gameInfo": {
+                "title": "Flutter - Stock Exchange Game",
+                "publisher": "J.W. Spear & Sons Ltd",
+                "year": 1966,
+                "players": "3-8 players",
+                "ageRange": "10 to adult",
+                "startingMoney": 300,
+                "winTarget": 600,
+                "brokerageFee": 5
+            },
+            "companies": [
+                {"id": "yellow", "name": "Fairfit Furniture Company", "color": "yellow", "className": "yellow-lane", "column": 1},
+                {"id": "red", "name": "Atomic Airways Company", "color": "red", "className": "red-lane", "column": 2},
+                {"id": "blue", "name": "Easygoing Engineering Co.", "color": "blue", "className": "blue-lane", "column": 3},
+                {"id": "green", "name": "Diggers Diamond Mines", "color": "green", "className": "green-lane", "column": 5},
+                {"id": "black", "name": "Bluebottle Brewery Company", "color": "black", "className": "black-lane", "column": 6},
+                {"id": "white", "name": "Captivating Cosmetic Company", "color": "white", "className": "white-lane", "column": 7}
+            ],
+            "marketNewsCards": [
+                {"id": 1, "title": "Company receives big contract against world-wide competition", "effect": "traveler_advance", "value": 4},
+                {"id": 2, "title": "Special distribution of capital profits", "effect": "dividend_percentage", "value": 30},
+                {"id": 3, "title": "Six-week strike at key works", "effect": "traveler_retreat", "value": 2},
+                {"id": 4, "title": "Strike causes heavy loss", "effect": "traveler_to_parent", "value": 0},
+                {"id": 5, "title": "International situation deteriorates — shares weaken", "effect": "parent_down", "value": 1},
+                {"id": 6, "title": "Company pays special centenary bonus", "effect": "dividend_percentage", "value": 10},
+                {"id": 7, "title": "Optimism on forthcoming budget causes favourable market reaction", "effect": "traveler_advance", "value": 4},
+                {"id": 8, "title": "Reduction in bank rate enables firm to increase development", "effect": "parent_up", "value": 1},
+                {"id": 9, "title": "Large wage increase", "effect": "traveler_retreat", "value": 6},
+                {"id": 10, "title": "Acute labour shortage reduces production", "effect": "traveler_to_parent", "value": 0},
+                {"id": 11, "title": "Increase in bank rate puts curb on expansion", "effect": "parent_down", "value": 1},
+                {"id": 12, "title": "Company on promise of excellent trading returns pays special interim dividend", "effect": "dividend_percentage", "value": 20},
+                {"id": 13, "title": "Modernisation of plant increases productivity", "effect": "traveler_advance", "value": 7},
+                {"id": 14, "title": "Premises and stock damaged by floods", "effect": "traveler_retreat", "value": 2},
+                {"id": 15, "title": "Company announces large increase in volume of sales", "effect": "traveler_advance", "value": 6},
+                {"id": 16, "title": "Foreign competition captures many markets", "effect": "traveler_retreat", "value": 4},
+                {"id": 17, "title": "Premises damaged by fire — temporarily affecting production", "effect": "traveler_retreat", "value": 4},
+                {"id": 18, "title": "Amalgamation with competitor boosts sales", "effect": "traveler_advance", "value": 4},
+                {"id": 19, "title": "Rumours of pending takeover bid", "effect": "parent_up", "value": 2},
+                {"id": 20, "title": "New method of production reduces costs", "effect": "parent_up", "value": 2},
+                {"id": 21, "title": "Shares fall on rumours of increased taxation", "effect": "traveler_retreat", "value": 2},
+                {"id": 22, "title": "New product very successful", "effect": "traveler_advance", "value": 6}
+            ],
+            "insuranceCards": [
+                {"id": 23, "title": "Anti-Slump Insurance Policy", "effect": "anti_slump_protection", "value": 1, "quantity": 2}
+            ],
+            "boardLayout": {
+                "priceTrack": [
+                    {"position": 200, "row": 8, "type": "price", "bonusShares": true},
+                    {"position": 190, "row": 9, "type": "price"},
+                    {"position": 180, "row": 10, "type": "price"},
+                    {"position": 170, "row": 11, "type": "price"},
+                    {"position": 160, "row": 12, "type": "price"},
+                    {"position": 150, "row": 13, "type": "price"},
+                    {"position": 140, "row": 14, "type": "price"},
+                    {"position": 130, "row": 15, "type": "price"},
+                    {"position": 120, "row": 16, "type": "price"},
+                    {"position": 110, "row": 17, "type": "price"},
+                    {"position": 100, "row": 18, "type": "price", "par": true},
+                    {"position": 90, "row": 19, "type": "price"},
+                    {"position": 80, "row": 20, "type": "price"},
+                    {"position": 70, "row": 21, "type": "price"},
+                    {"position": 60, "row": 22, "type": "price"},
+                    {"position": 50, "row": 23, "type": "price"},
+                    {"position": 40, "row": 24, "type": "price"},
+                    {"position": 30, "row": 25, "type": "price"},
+                    {"position": 20, "row": 26, "type": "price"},
+                    {"position": 10, "row": 27, "type": "price"},
+                    {"position": 0, "row": 28, "type": "bankrupt"}
+                ],
+                "specialCells": [
+                    {"row": 2, "type": "payout", "value": "20%"},
+                    {"row": 3, "type": "slump"},
+                    {"row": 4, "type": "payout", "value": "15%"},
+                    {"row": 5, "type": "payout", "value": "10%"},
+                    {"row": 6, "type": "payout", "value": "5%"},
+                    {"row": 7, "type": "market_news"}
+                ]
+            }
+        };
+
+        // Game state with personality assignments
+        let gameState = {
+            currentPlayer: 0,
+            activeColors: ['yellow', 'red', 'blue', 'green'],
+            playerPositions: {},
+            travelerPositions: {},
+            playerCash: {},
+            playerShares: {},
+            antiSlumpCards: {},
+            playerPersonalities: {}, // New: stores personality assignments
+            marketCards: [...GAME_DATA.marketNewsCards],
+            insuranceCards: [...GAME_DATA.insuranceCards],
+            roundInProgress: false,
+            gameRounds: 0,
+            totalBonusIssues: 0,
+            bankruptCompanies: []
+        };
+
+        // Auto-play variables
+        let autoPlayInterval = null;
+        let isAutoPlaying = false;
+        let autoPlaySpeed = 1500; // Default 1.5 seconds
+
+        // Personality Trading Engine
+        class PersonalityTradingEngine {
+            static getPersonality(playerColor) {
+                const personalityKey = gameState.playerPersonalities[playerColor];
+                return AI_PERSONALITIES[personalityKey];
+            }
+
+            static assignRandomPersonalities() {
+                const personalityKeys = Object.keys(AI_PERSONALITIES);
+                gameState.activeColors.forEach(colorId => {
+                    const randomIndex = Math.floor(Math.random() * personalityKeys.length);
+                    gameState.playerPersonalities[colorId] = personalityKeys[randomIndex];
+                    
+                    const personality = AI_PERSONALITIES[personalityKeys[randomIndex]];
+                    const company = GAME_DATA.companies.find(c => c.id === colorId);
+                    logToConsole(`${company.name} assigned personality: ${personality.emoji} ${personality.name}`);
+                });
+            }
+
+            static makeAIDecision(playerColor) {
+                const personality = this.getPersonality(playerColor);
+                if (!personality) return { action: 'hold', reasoning: 'No personality assigned' };
+
+                const playerCompany = GAME_DATA.companies.find(c => c.id === playerColor);
+                const cash = gameState.playerCash[playerColor];
+                const playerShares = gameState.playerShares[playerColor] || {};
+                
+                // Should we trade this turn? (Rule 8a allows holding)
+                if (Math.random() > personality.tradingFrequency) {
+                    return {
+                        action: 'hold',
+                        reasoning: `${personality.emoji} Sitting out trading (${(personality.tradingFrequency * 100).toFixed(0)}% frequency - dice roll still mandatory)`
+                    };
+                }
+
+                // Analyze market with personality lens
+                const analysis = this.analyzeMarket(playerColor, personality);
+                
+                // Make personality-based decision
+                return this.makeDecision(playerColor, personality, analysis);
+            }
+
+            static analyzeMarket(playerColor, personality) {
+                const analysis = {
+                    opportunities: [],
+                    threats: [],
+                    cashRatio: 0,
+                    portfolioValue: 0
+                };
+
+                const cash = gameState.playerCash[playerColor];
+                const shareValue = this.calculateShareValue(playerColor);
+                analysis.portfolioValue = cash + shareValue;
+                analysis.cashRatio = cash / Math.max(analysis.portfolioValue, 1);
+
+                // Analyze each company
+                gameState.activeColors.forEach(companyId => {
+                    const company = GAME_DATA.companies.find(c => c.id === companyId);
+                    const parentPos = gameState.playerPositions[companyId];
+                    const travelerPos = gameState.travelerPositions[companyId];
+                    const myShares = gameState.playerShares[playerColor][companyId] || 0;
+                    
+                    const priceLevel = this.categorizePrice(parentPos, personality);
+                    const momentum = travelerPos - parentPos;
+                    const dividendPotential = this.assessDividendPotential(travelerPos, personality);
+                    const riskScore = this.assessRisk(parentPos, travelerPos, personality);
+
+                    // Identify opportunities based on personality
+                    if (this.isBuyOpportunity(priceLevel, momentum, dividendPotential, riskScore, personality)) {
+                        analysis.opportunities.push({
+                            company: companyId,
+                            price: parentPos,
+                            reasoning: this.getBuyReasoning(priceLevel, momentum, dividendPotential, personality),
+                            strength: this.calculateBuyStrength(priceLevel, momentum, dividendPotential, personality)
+                        });
+                    }
+
+                    // Identify threats (sell signals)
+                    if (myShares > 0 && this.isSellSignal(priceLevel, momentum, riskScore, personality)) {
+                        analysis.threats.push({
+                            company: companyId,
+                            price: parentPos,
+                            shares: myShares,
+                            reasoning: this.getSellReasoning(priceLevel, momentum, riskScore, personality),
+                            urgency: this.calculateSellUrgency(priceLevel, riskScore, personality)
+                        });
+                    }
+                });
+
+                return analysis;
+            }
+
+            static categorizePrice(price, personality) {
+                const thresholds = personality.priceThresholds;
+                
+                if (price <= thresholds.bargainBuyAt) return 'screaming_buy';
+                if (price <= thresholds.buyBelow) return 'buy_zone';
+                if (price <= 100) return 'fair_value';
+                if (price <= thresholds.sellAbove) return 'hold_zone';
+                if (price <= thresholds.panicSellAt) return 'sell_zone';
+                return 'panic_sell';
+            }
+
+            static assessDividendPotential(travelerPos, personality) {
+                if (personality.dividendFocus < 0.3) return 0.1;
+                
+                const dividendLevels = [125, 150, 190, 200];
+                const distances = dividendLevels.map(level => Math.abs(travelerPos - level));
+                const nearestDistance = Math.min(...distances);
+                
+                return Math.max(0, (50 - nearestDistance) / 50) * personality.dividendFocus;
+            }
+
+            static assessRisk(parentPos, travelerPos, personality) {
+                const priceRisk = parentPos > 150 ? (parentPos - 150) / 50 : 0;
+                const volatilityRisk = Math.abs(travelerPos - parentPos) / 50;
+                const newsProximityRisk = Math.abs(travelerPos - 130) < 20 ? 0.5 : 0;
+                
+                return (priceRisk + volatilityRisk + newsProximityRisk) / 3;
+            }
+
+            static isBuyOpportunity(priceLevel, momentum, dividendPotential, riskScore, personality) {
+                if (priceLevel === 'screaming_buy') return true;
+                if (priceLevel === 'buy_zone' && momentum > 0 && personality.momentumTrading > 0.5) return true;
+                if (priceLevel === 'fair_value' && dividendPotential > 0.6 && personality.dividendFocus > 0.6) return true;
+                if (personality.contrarian > 0.7 && priceLevel === 'sell_zone') return true; // Contrarian buy
+                
+                return false;
+            }
+
+            static isSellSignal(priceLevel, momentum, riskScore, personality) {
+                if (priceLevel === 'panic_sell') return true;
+                if (priceLevel === 'sell_zone' && riskScore > personality.riskTolerance) return true;
+                if (momentum < -20 && personality.momentumTrading > 0.6) return true; // Negative momentum
+                
+                return false;
+            }
+
+            static makeDecision(playerColor, personality, analysis) {
+                const needsCash = analysis.cashRatio < personality.cashReserveTarget;
+                const hasExcessCash = analysis.cashRatio > personality.cashReserveTarget + 0.1;
+
+                // SELL FIRST (risk management and cash needs)
+                if ((needsCash || analysis.threats.length > 0) && analysis.threats.length > 0) {
+                    const topThreat = analysis.threats.sort((a, b) => b.urgency - a.urgency)[0];
+                    return {
+                        action: 'sell',
+                        company: topThreat.company,
+                        reasoning: `${personality.emoji} ${topThreat.reasoning}`
+                    };
+                }
+
+                // BUY OPPORTUNITIES (only if we have cash)
+                if (!needsCash && hasExcessCash && analysis.opportunities.length > 0) {
+                    const cash = gameState.playerCash[playerColor];
+                    const affordable = analysis.opportunities.filter(opp => {
+                        const totalCost = opp.price + GAME_DATA.gameInfo.brokerageFee;
+                        return cash >= totalCost;
+                    });
+
+                    if (affordable.length > 0) {
+                        const topOpportunity = affordable.sort((a, b) => b.strength - a.strength)[0];
+                        return {
+                            action: 'buy',
+                            company: topOpportunity.company,
+                            reasoning: `${personality.emoji} ${topOpportunity.reasoning}`
+                        };
+                    }
+                }
+
+                // AGGRESSIVE PERSONALITIES - speculative moves
+                if (personality.aggressiveness > 0.7 && hasExcessCash) {
+                    const cheapestStock = gameState.activeColors
+                        .map(id => ({ id, price: gameState.playerPositions[id] }))
+                        .sort((a, b) => a.price - b.price)[0];
+                    
+                    const totalCost = cheapestStock.price + GAME_DATA.gameInfo.brokerageFee;
+                    const cash = gameState.playerCash[playerColor];
+                    
+                    if (cash >= totalCost && cheapestStock.price < 120) {
+                        return {
+                            action: 'buy',
+                            company: cheapestStock.id,
+                            reasoning: `${personality.emoji} Aggressive speculation on cheapest stock`
+                        };
+                    }
+                }
+
+                return {
+                    action: 'hold',
+                    reasoning: `${personality.emoji} No trading opportunities (cash: ${(analysis.cashRatio * 100).toFixed(0)}% - dice roll still mandatory)`
+                };
+            }
+
+            static getBuyReasoning(priceLevel, momentum, dividendPotential, personality) {
+                const reasons = [];
+                if (priceLevel === 'screaming_buy') reasons.push('extreme value');
+                if (momentum > 10 && personality.momentumTrading > 0.5) reasons.push('momentum');
+                if (dividendPotential > 0.6 && personality.dividendFocus > 0.6) reasons.push('dividend play');
+                if (personality.contrarian > 0.7) reasons.push('contrarian bet');
+                
+                return reasons.length > 0 ? reasons.join(', ') : 'speculative buy';
+            }
+
+            static getSellReasoning(priceLevel, momentum, riskScore, personality) {
+                const reasons = [];
+                if (priceLevel === 'panic_sell') reasons.push('overvalued');
+                if (riskScore > personality.riskTolerance) reasons.push('risk control');
+                if (momentum < -20) reasons.push('negative momentum');
+                
+                return reasons.length > 0 ? reasons.join(', ') : 'profit taking';
+            }
+
+            static calculateBuyStrength(priceLevel, momentum, dividendPotential, personality) {
+                let strength = 0.3;
+                if (priceLevel === 'screaming_buy') strength += 0.5;
+                if (momentum > 0) strength += (momentum / 50) * personality.momentumTrading;
+                if (dividendPotential > 0.5) strength += dividendPotential * personality.dividendFocus;
+                
+                return Math.min(1, strength);
+            }
+
+            static calculateSellUrgency(priceLevel, riskScore, personality) {
+                let urgency = 0.3;
+                if (priceLevel === 'panic_sell') urgency = 1.0;
+                if (priceLevel === 'sell_zone') urgency += 0.4;
+                if (riskScore > personality.riskTolerance) urgency += 0.3;
+                
+                return Math.min(1, urgency);
+            }
+
+            static calculateShareValue(playerColor) {
+                let totalValue = 0;
+                const playerShares = gameState.playerShares[playerColor] || {};
+                
+                Object.keys(playerShares).forEach(companyId => {
+                    const shares = playerShares[companyId] || 0;
+                    const currentPrice = gameState.playerPositions[companyId] || 100;
+                    totalValue += shares * currentPrice;
+                });
+                
+                return totalValue;
+            }
+
+            static executeTrade(playerColor, decision) {
+                if (decision.action === 'buy') {
+                    return this.executeBuy(playerColor, decision.company, decision.reasoning);
+                } else if (decision.action === 'sell') {
+                    return this.executeSell(playerColor, decision.company, decision.reasoning);
+                } else {
+                    // Rule 8a: Player chooses to hold (no trading) - dice roll still mandatory
+                    const playerCompany = GAME_DATA.companies.find(c => c.id === playerColor);
+                    logToConsole(`${playerCompany.name}: ${decision.reasoning}`);
+                    return false; // No trade executed, but turn continues to mandatory dice phase
+                }
+            }
+
+            static executeBuy(playerColor, targetCompany, reasoning) {
+                const playerCompany = GAME_DATA.companies.find(c => c.id === playerColor);
+                const targetCompanyData = GAME_DATA.companies.find(c => c.id === targetCompany);
+                const sharePrice = gameState.playerPositions[targetCompany];
+                const totalCost = sharePrice + GAME_DATA.gameInfo.brokerageFee;
+                
+                if (gameState.playerCash[playerColor] >= totalCost) {
+                    gameState.playerCash[playerColor] -= totalCost;
+                    gameState.playerShares[playerColor][targetCompany] = (gameState.playerShares[playerColor][targetCompany] || 0) + 1;
+                    
+                    logToConsole(`${playerCompany.name} bought ${targetCompanyData.name} for £${totalCost} - ${reasoning}`);
+                    return true;
+                }
+                
+                return false;
+            }
+
+            static executeSell(playerColor, targetCompany, reasoning) {
+                const playerCompany = GAME_DATA.companies.find(c => c.id === playerColor);
+                const targetCompanyData = GAME_DATA.companies.find(c => c.id === targetCompany);
+                const sharePrice = gameState.playerPositions[targetCompany];
+                
+                if ((gameState.playerShares[playerColor][targetCompany] || 0) > 0) {
+                    gameState.playerCash[playerColor] += sharePrice;
+                    gameState.playerShares[playerColor][targetCompany] -= 1;
+                    
+                    logToConsole(`${playerCompany.name} sold ${targetCompanyData.name} for £${sharePrice} - ${reasoning}`);
+                    return true;
+                }
+                
+                return false;
+            }
+        }
+
+        function logToConsole(message) {
+            const console = document.getElementById('game-console');
+            const timestamp = new Date().toLocaleTimeString();
+            const logEntry = document.createElement('div');
+            logEntry.textContent = `[${timestamp}] ${message}`;
+            console.appendChild(logEntry);
+            console.scrollTop = console.scrollHeight;
+        }
+
+        function clearConsole() {
+            const console = document.getElementById('game-console');
+            console.innerHTML = '<div>Flutter Game Console v5.0 - AI Personalities</div><div>Console cleared...</div>';
+        }
+
+        function verifySpecialCells() {
+            logToConsole('=== VERIFYING ALL SPECIAL CELLS ===');
+            
+            const board = document.getElementById('game-board');
+            const allCells = board.querySelectorAll('.board-cell');
+            
+            logToConsole(`Total cells on board: ${allCells.length}`);
+            
+            // Check special rows for all companies
+            const specialRows = [2, 3, 4, 5, 6, 7];
+            const rowNames = {
+                2: '20% payout',
+                3: 'SLUMP', 
+                4: '15% payout',
+                5: '10% payout',
+                6: '5% payout',
+                7: 'Market News (M)'
+            };
+            
+            GAME_DATA.companies.forEach(company => {
+                if (company.column === 5) return; // Skip price column
+                
+                logToConsole(`\n--- ${company.name} (column ${company.column}) ---`);
+                
+                specialRows.forEach(row => {
+                    let cellFound = false;
+                    let cellClasses = '';
+                    
+                    allCells.forEach(cell => {
+                        const cellRow = parseInt(cell.style.gridRow);
+                        const cellCol = parseInt(cell.style.gridColumn);
+                        
+                        if (cellRow === row && cellCol === company.column) {
+                            cellFound = true;
+                            cellClasses = cell.className;
+                        }
+                    });
+                    
+                    if (cellFound) {
+                        logToConsole(`✅ Row ${row} (${rowNames[row]}): EXISTS - classes: ${cellClasses}`);
+                    } else {
+                        logToConsole(`❌ Row ${row} (${rowNames[row]}): MISSING`);
+                    }
+                });
+            });
+            
+            // Count cells by row
+            logToConsole('\n=== CELL COUNT BY ROW ===');
+            for (let row = 2; row <= 10; row++) {
+                let count = 0;
+                allCells.forEach(cell => {
+                    if (parseInt(cell.style.gridRow) === row) count++;
+                });
+                logToConsole(`Row ${row}: ${count} cells`);
+            }
+            
+            logToConsole('=== END VERIFICATION ===');
+        }
+
+        function showPersonalities() {
+            logToConsole('=== CURRENT AI PERSONALITIES ===');
+            gameState.activeColors.forEach(colorId => {
+                const company = GAME_DATA.companies.find(c => c.id === colorId);
+                const personalityKey = gameState.playerPersonalities[colorId];
+                const personality = AI_PERSONALITIES[personalityKey];
+                if (personality) {
+                    logToConsole(`${company.name}: ${personality.emoji} ${personality.name}`);
+                    logToConsole(`  Strategy: ${personality.description}`);
+                    logToConsole(`  Risk: ${(personality.riskTolerance * 100).toFixed(0)}% | Active: ${(personality.aggressiveness * 100).toFixed(0)}% | Frequency: ${(personality.tradingFrequency * 100).toFixed(0)}%`);
+                }
+            });
+            logToConsole('=== END PERSONALITIES ===');
+        }
+
+        function initializeGame() {
+            logToConsole('=== INITIALIZING FRESH GAME STATE ===');
+            
+            // CRITICAL: Completely reset all game state with explicit initialization
+            gameState.playerPositions = {};
+            gameState.travelerPositions = {};
+            gameState.playerCash = {};
+            gameState.playerShares = {};
+            gameState.antiSlumpCards = {};
+            gameState.playerPersonalities = {};
+            
+            // Initialize ALL companies first (to avoid undefined errors)
+            GAME_DATA.companies.forEach(company => {
+                const colorId = company.id;
+                
+                // Reset positions to PAR for ALL companies
+                gameState.playerPositions[colorId] = 100;
+                gameState.travelerPositions[colorId] = 100;
+                
+                // Initialize cash and shares for ALL companies
+                gameState.playerCash[colorId] = 0;
+                gameState.antiSlumpCards[colorId] = 0;
+                gameState.playerShares[colorId] = {};
+                
+                // Initialize share matrix for ALL companies
+                GAME_DATA.companies.forEach(shareCompany => {
+                    gameState.playerShares[colorId][shareCompany.id] = 0;
+                });
+            });
+            
+            // Now set starting money ONLY for active companies
+            gameState.activeColors.forEach(activeColorId => {
+                gameState.playerCash[activeColorId] = GAME_DATA.gameInfo.startingMoney;
+                const company = GAME_DATA.companies.find(c => c.id === activeColorId);
+                logToConsole(`${company.name}: £${GAME_DATA.gameInfo.startingMoney} cash, 0 shares`);
+            });
+            
+            // Assign random personalities
+            PersonalityTradingEngine.assignRandomPersonalities();
+            
+            // Reset cards
+            gameState.marketCards = [...GAME_DATA.marketNewsCards];
+            gameState.insuranceCards = [...GAME_DATA.insuranceCards];
+            gameState.roundInProgress = false;
+            gameState.gameRounds = 0;
+            gameState.totalBonusIssues = 0;
+            gameState.bankruptCompanies = [];
+            gameState.currentPlayer = 0;
+            
+            // Update player count display
+            document.getElementById('player-count').textContent = gameState.activeColors.length;
+            
+            updateDisplays();
+            logToConsole(`Game initialized with ${gameState.activeColors.length} active companies`);
+            logToConsole(`Starting money: £${GAME_DATA.gameInfo.startingMoney} | Win target: £${GAME_DATA.gameInfo.winTarget}`);
+            logToConsole(`VERIFIED: All players start with £${GAME_DATA.gameInfo.startingMoney} cash and ZERO shares`);
+        }
+
+        function initializeBoard() {
+            const board = document.getElementById('game-board');
+            
+            logToConsole('Initializing board layout...');
+            
+            // Create special cells first (payouts, slump, market news) - CENTER COLUMN ONLY
+            GAME_DATA.boardLayout.specialCells.forEach(cell => {
+                const cellElement = document.createElement('div');
+                if (cell.type === 'payout') {
+                    cellElement.className = 'board-cell payout-cell';
+                } else {
+                    cellElement.className = `board-cell ${cell.type}-cell`;
+                }
+                cellElement.style.gridRow = cell.row;
+                cellElement.style.gridColumn = 5; // Price column
+                cellElement.textContent = cell.value || cell.type.toUpperCase().replace('_', ' ');
+                board.appendChild(cellElement);
+            });
+
+            // Create complete price column (column 4) - EXACT AUTHENTIC LAYOUT
+            const priceCells = [
+                'PRICE',        // Row 1: Header
+                '20%',          // Row 2: 20% dividend
+                'SLUMP',        // Row 3: SLUMP
+                '10%',          // Row 4: 10% dividend
+                '10%',          // Row 5: 10% dividend
+                'SLUMP',        // Row 6: SLUMP
+                '10%',          // Row 7: 10% dividend
+                '5%',           // Row 8: 5% dividend
+                '5%',           // Row 9: 5% dividend
+                '5%',           // Row 10: 5% dividend
+                'MARKET NEWS',  // Row 11: Market News
+                '200',          // Row 12: £200
+                '190',          // Row 13: £190
+                '180',          // Row 14: £180
+                '170',          // Row 15: £170
+                '160',          // Row 16: £160
+                '150',          // Row 17: £150
+                '140',          // Row 18: £140
+                '130',          // Row 19: £130
+                '120',          // Row 20: £120
+                '110',          // Row 21: £110
+                'PAR 100',      // Row 22: £100 PAR
+                '90',           // Row 23: £90
+                '80',           // Row 24: £80
+                '70',           // Row 25: £70
+                '60',           // Row 26: £60
+                '50',           // Row 27: £50
+                '40',           // Row 28: £40
+                '30',           // Row 29: £30
+                '20',           // Row 30: £20
+                '10',           // Row 31: £10
+                'BANKRUPT'      // Row 32: Bankrupt (zero)
+            ];
+            
+            priceCells.forEach((label, index) => {
+                const row = index + 1;
+                const priceCell = document.createElement('div');
+                
+                if (row === 1) {
+                    priceCell.className = 'lane-header price-column';
+                } else if (label === 'BANKRUPT') {
+                    priceCell.className = 'board-cell bankrupt-cell';
+                } else if (label === 'MARKET NEWS') {
+                    priceCell.className = 'board-cell price-cell market-news';
+                } else {
+                    priceCell.className = 'board-cell price-cell';
+                }
+                
+                priceCell.style.gridRow = row;
+                priceCell.style.gridColumn = 4;
+                priceCell.textContent = label;
+                board.appendChild(priceCell);
+            });
+
+            // Generate ALL colored lane cells INCLUDING ALL SPECIAL POSITIONS
+            logToConsole('Creating colored lane cells for all companies...');
+            
+            // First, create company headers (row 1) for all companies
+            GAME_DATA.companies.forEach(company => {
+                const headerCell = document.createElement('div');
+                headerCell.className = `lane-header ${company.className}`;
+                headerCell.style.gridRow = 1;
+                headerCell.style.gridColumn = company.column;
+                headerCell.textContent = company.name.split(' ')[0]; // First word only
+                board.appendChild(headerCell);
+            });
+            
+            // CRITICAL: Create special action cells (rows 2-11) per AUTHENTIC LAYOUT
+            const specialRows = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]; // Complete authentic layout
+            const specialRowTypes = {
+                2: { type: 'payout', value: '20%', dividend: 20 },
+                3: { type: 'slump', value: 'SLUMP' },
+                4: { type: 'payout', value: '10%', dividend: 10 },
+                5: { type: 'payout', value: '10%', dividend: 10 },
+                6: { type: 'slump', value: 'SLUMP' },
+                7: { type: 'payout', value: '10%', dividend: 10 },
+                8: { type: 'payout', value: '5%', dividend: 5 },
+                9: { type: 'payout', value: '5%', dividend: 5 },
+                10: { type: 'payout', value: '5%', dividend: 5 },
+                11: { type: 'market_news', value: 'MARKET NEWS' }
+            };
+            
+            // Create ALL special position cells for ALL companies
+            GAME_DATA.companies.forEach(company => {
+                
+                specialRows.forEach(row => {
+                    const specialType = specialRowTypes[row];
+                    const cell = document.createElement('div');
+                    cell.className = `board-cell ${company.className}`;
+                    cell.style.gridRow = row;
+                    cell.style.gridColumn = company.column;
+                    
+                    // Style based on special type - USE DOTS LIKE REGULAR CELLS
+                    const dot = document.createElement('div');
+                    if (specialType.type === 'payout') {
+                        cell.classList.add('payout-cell');
+                        cell.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                        dot.style.cssText = 'width: 6px; height: 6px; background: rgba(255,255,255,0.9); border-radius: 50%; margin: auto;';
+                    } else if (specialType.type === 'slump') {
+                        cell.classList.add('slump-cell');
+                        cell.style.background = 'linear-gradient(135deg, #f97316, #ea580c)';
+                        dot.style.cssText = 'width: 6px; height: 6px; background: rgba(255,255,255,0.9); border-radius: 50%; margin: auto;';
+                    } else if (specialType.type === 'market_news') {
+                        cell.classList.add('market-news-cell');
+                        cell.style.background = 'linear-gradient(135deg, #8b5cf6, #7c3aed)';
+                        dot.style.cssText = 'width: 6px; height: 6px; background: rgba(255,255,255,0.9); border-radius: 50%; margin: auto;';
+                    }
+                    
+                    cell.appendChild(dot);
+                    board.appendChild(cell);
+                    logToConsole(`Created special cell: ${company.name} dot at row ${row}, col ${company.column}`);
+                });
+            });
+            
+            // Then create regular price cells for rows 12-32 (covering £200 down to BANKRUPT)
+            for (let row = 12; row <= 32; row++) {
+                GAME_DATA.companies.forEach(company => {
+                    
+                    const cell = document.createElement('div');
+                    cell.className = `board-cell ${company.className}`;
+                    cell.style.gridRow = row;
+                    cell.style.gridColumn = company.column;
+                    
+                    // Special handling for bankruptcy row (row 32 per authentic layout)
+                    if (row === 32) {
+                        cell.innerHTML = '<span style="font-size: 1.2rem; color: rgba(255,255,255,0.9); font-weight: bold;">-</span>';
+                        cell.classList.add('bankrupt-cell');
+                        cell.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+                    } else {
+                        // Regular price cells - add a subtle dot
+                        const dot = document.createElement('div');
+                        dot.style.cssText = 'width: 4px; height: 4px; background: rgba(255,255,255,0.3); border-radius: 50%; margin: auto;';
+                        cell.appendChild(dot);
+                    }
+                    
+                    board.appendChild(cell);
+                });
+            }
+            
+            const totalCells = board.querySelectorAll('.board-cell').length;
+            logToConsole(`Board initialized with ${totalCells} cells`);
+            logToConsole(`Special action cells created for rows 2-6 across all company columns (authentic Rule 11 layout)`);
+            logToConsole('Board ready for peg placement');
+        }
+
+        function updateDisplays() {
+            updateCompanyPrices();
+            updatePlayerList();
+            updatePegPositions();
+            updateGameStatus();
+        }
+
+        function updateCompanyPrices() {
+            const container = document.getElementById('company-prices');
+            container.innerHTML = '';
+            
+            // Show ALL companies but highlight active ones
+            GAME_DATA.companies.forEach(company => {
+                const position = gameState.playerPositions[company.id] || 100;
+                const isActive = gameState.activeColors.includes(company.id);
+                const row = document.createElement('div');
+                row.className = `price-row ${!isActive ? 'disabled' : ''}`;
+                row.innerHTML = `
+                    <div style="display: flex; align-items: center;">
+                        <div class="price-color ${company.className}"></div>
+                        ${company.name} ${!isActive ? '(inactive)' : ''}
+                    </div>
+                    <span>£${position}</span>
+                `;
+                container.appendChild(row);
+            });
+        }
+
+        function updatePlayerList() {
+            const container = document.getElementById('player-list');
+            container.innerHTML = '';
+            
+            // Only show ACTIVE companies in the player list
+            const playerData = [];
+            gameState.activeColors.forEach(colorId => {
+                const company = GAME_DATA.companies.find(c => c.id === colorId);
+                const isCurrentPlayer = gameState.activeColors[gameState.currentPlayer] === colorId;
+                const cash = gameState.playerCash[colorId] || 0;
+                const shareValue = calculateShareValue(colorId);
+                const netWorth = cash + shareValue;
+                const personality = PersonalityTradingEngine.getPersonality(colorId);
+                
+                playerData.push({
+                    company,
+                    isCurrentPlayer,
+                    cash,
+                    shareValue,
+                    netWorth,
+                    personality
+                });
+            });
+            
+            // Sort by net worth (highest first) to show leaderboard
+            playerData.sort((a, b) => b.netWorth - a.netWorth);
+            
+            // Create player display elements
+            playerData.forEach((data, index) => {
+                const isWinning = index === 0 && data.netWorth > 0;
+                const isNearWin = data.netWorth >= GAME_DATA.gameInfo.winTarget * 0.8;
+                
+                const playerDiv = document.createElement('div');
+                
+                // Add special styling for leaders
+                let playerClass = 'player-info';
+                if (data.isCurrentPlayer) playerClass += ' current-player';
+                if (isWinning) playerClass += ' winning-player';
+                else if (isNearWin) playerClass += ' near-win';
+                
+                playerDiv.className = playerClass;
+                
+                // Add ranking indicator
+                let rankIcon = '';
+                if (index === 0) rankIcon = '👑';
+                else if (index === 1) rankIcon = '🥈';
+                else if (index === 2) rankIcon = '🥉';
+                else rankIcon = `${index + 1}.`;
+                
+                // Create share holdings display ONLY for active companies
+                const shareHoldings = createShareHoldingsDisplay(data.company.id);
+                
+                // Get personality info
+                const personalityDisplay = data.personality ? 
+                    `${data.personality.emoji} ${data.personality.name}` : 
+                    '🤖 Unknown';
+                
+                playerDiv.innerHTML = `
+                    <div class="player-name">
+                        <span style="margin-right: 5px; font-weight: bold; color: #fbbf24;">${rankIcon}</span>
+                        <div class="player-color ${data.company.className}"></div>
+                        ${data.company.name}
+                    </div>
+                    <div class="personality-indicator">${personalityDisplay}</div>
+                    <div class="player-stats">
+                        <div>Cash: £${data.cash}</div>
+                        <div>Shares: £${data.shareValue}</div>
+                        <div style="font-weight: bold; color: ${isNearWin ? '#10b981' : '#fff'};">Net Worth: £${data.netWorth}</div>
+                        <div>Anti-Slump: ${gameState.antiSlumpCards[data.company.id] || 0}</div>
+                    </div>
+                    <div class="share-holdings">
+                        ${shareHoldings}
+                    </div>
+                `;
+                
+                container.appendChild(playerDiv);
+            });
+        }
+
+        function createShareHoldingsDisplay(playerId) {
+            const playerShares = gameState.playerShares[playerId] || {};
+            let holdingsHtml = '<div class="holdings-title">Holdings:</div><div class="holdings-boxes">';
+            
+            // Show boxes ONLY for active companies
+            gameState.activeColors.forEach(companyId => {
+                const company = GAME_DATA.companies.find(c => c.id === companyId);
+                const shares = playerShares[companyId] || 0;
+                
+                holdingsHtml += `
+                    <div class="share-box ${company.className}" title="${company.name}: ${shares} shares">
+                        ${shares}
+                    </div>
+                `;
+            });
+            
+            holdingsHtml += '</div>';
+            return holdingsHtml;
+        }
+
+        function calculateShareValue(playerId) {
+            let totalValue = 0;
+            const playerShares = gameState.playerShares[playerId] || {};
+            
+            Object.keys(playerShares).forEach(companyId => {
+                const shares = playerShares[companyId] || 0;
+                const currentPrice = gameState.playerPositions[companyId] || 100;
+                const value = shares * currentPrice;
+                totalValue += value;
+            });
+            
+            return totalValue;
+        }
+
+        function updatePegPositions() {
+            console.log('=== UPDATING PEG POSITIONS ===');
+            
+            // Remove existing pegs
+            const existingPegs = document.querySelectorAll('.player-peg, .traveler-peg');
+            console.log(`Removing ${existingPegs.length} existing pegs`);
+            existingPegs.forEach(peg => peg.remove());
+            
+            // Add pegs ONLY for active companies
+            console.log(`Active companies: ${gameState.activeColors.join(', ')}`);
+            
+            gameState.activeColors.forEach(colorId => {
+                const company = GAME_DATA.companies.find(c => c.id === colorId);
+                if (!company) {
+                    console.log(`Company not found for ${colorId}`);
+                    return;
+                }
+                
+                const parentPosition = gameState.playerPositions[colorId];
+                const travelerPosition = gameState.travelerPositions[colorId];
+                
+                console.log(`${company.name}: parent=£${parentPosition}, traveler=£${travelerPosition}`);
+                
+                // Always add parent peg
+                addPegToBoard(company, parentPosition, 'parent');
+                
+                // ALWAYS add traveler peg, even if same position (for visual clarity)
+                addPegToBoard(company, travelerPosition, 'traveler');
+            });
+            
+            // Verify pegs were added
+            setTimeout(() => {
+                const totalPegs = document.querySelectorAll('.player-peg, .traveler-peg').length;
+                console.log(`Total pegs now on board: ${totalPegs}`);
+                console.log('=== PEG UPDATE COMPLETE ===');
+            }, 100);
+        }
+
+        function addPegToBoard(company, position, pegType) {
+            // Calculate row from position - AUTHENTIC RULE 11 STRUCTURE
+            let row;
+            
+            if (position === 0) {
+                row = 32; // Bankrupt position (authentic 32-row layout)
+            } else if (position >= 10 && position <= 200) {
+                // Regular price positions: £200 at row 12, £190 at row 13, etc.
+                // Formula: row = 12 + ((200 - position) / 10)
+                row = 12 + ((200 - position) / 10);
+            } else if (position > 200) {
+                // Map positions above £200 to authentic special cells (rows 2-11)
+                if (position >= 300) {
+                    row = 11; // £300+ → Market News
+                } else if (position >= 290) {
+                    row = 10; // £290-299 → 5%
+                } else if (position >= 280) {
+                    row = 9;  // £280-289 → 5%
+                } else if (position >= 270) {
+                    row = 8;  // £270-279 → 5%
+                } else if (position >= 260) {
+                    row = 7;  // £260-269 → 10%
+                } else if (position >= 250) {
+                    row = 6;  // £250-259 → SLUMP
+                } else if (position >= 240) {
+                    row = 5;  // £240-249 → 10%
+                } else if (position >= 230) {
+                    row = 4;  // £230-239 → 10%
+                } else if (position >= 220) {
+                    row = 3;  // £220-229 → SLUMP
+                } else if (position >= 210) {
+                    row = 2;  // £210-219 → 20%
+                } else {
+                    row = 2;  // £201-209 → 20% (default to top)
+                }
+            } else {
+                console.warn(`Invalid position £${position} - no matching row`);
+                return;
+            }
+            
+            console.log(`Adding ${pegType} peg for ${company.name} at £${position} -> row ${row}, column ${company.column}`);
+            
+            const column = company.column;
+            
+            // Find the target cell
+            const board = document.getElementById('game-board');
+            const allCells = board.querySelectorAll('.board-cell');
+            
+            let targetCell = null;
+            allCells.forEach(cell => {
+                const cellRow = parseInt(cell.style.gridRow);
+                const cellCol = parseInt(cell.style.gridColumn);
+                
+                if (cellRow === row && cellCol === column) {
+                    targetCell = cell;
+                }
+            });
+
+            if (!targetCell) {
+                // Create the cell if it doesn't exist
+                const cell = document.createElement('div');
+                cell.className = `board-cell ${company.className}`;
+                cell.style.gridRow = row;
+                cell.style.gridColumn = column;
+                
+                // Add content based on row (AUTHENTIC 32-ROW STRUCTURE)
+                const dot = document.createElement('div');
+                if (row === 2) {
+                    // 20% payout
+                    dot.style.cssText = 'width: 6px; height: 6px; background: rgba(255,255,255,0.9); border-radius: 50%; margin: auto;';
+                    cell.appendChild(dot);
+                    cell.classList.add('payout-cell');
+                    cell.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                } else if (row === 3 || row === 6) {
+                    // SLUMP cells
+                    dot.style.cssText = 'width: 6px; height: 6px; background: rgba(255,255,255,0.9); border-radius: 50%; margin: auto;';
+                    cell.appendChild(dot);
+                    cell.classList.add('slump-cell');
+                    cell.style.background = 'linear-gradient(135deg, #f97316, #ea580c)';
+                } else if (row === 4 || row === 5 || row === 7) {
+                    // 10% payout cells
+                    dot.style.cssText = 'width: 6px; height: 6px; background: rgba(255,255,255,0.9); border-radius: 50%; margin: auto;';
+                    cell.appendChild(dot);
+                    cell.classList.add('payout-cell');
+                    cell.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                } else if (row === 8 || row === 9 || row === 10) {
+                    // 5% payout cells
+                    dot.style.cssText = 'width: 6px; height: 6px; background: rgba(255,255,255,0.9); border-radius: 50%; margin: auto;';
+                    cell.appendChild(dot);
+                    cell.classList.add('payout-cell');
+                    cell.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                } else if (row === 11) {
+                    // Market News cell
+                    dot.style.cssText = 'width: 6px; height: 6px; background: rgba(255,255,255,0.9); border-radius: 50%; margin: auto;';
+                    cell.appendChild(dot);
+                    cell.classList.add('market-news-cell');
+                    cell.style.background = 'linear-gradient(135deg, #8b5cf6, #7c3aed)';
+                } else if (row === 32) {
+                    // Bankruptcy cell (row 32)
+                    cell.innerHTML = '<span style="font-size: 1.2rem; color: rgba(255,255,255,0.9); font-weight: bold;">-</span>';
+                    cell.classList.add('bankrupt-cell');
+                    cell.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+                } else {
+                    // Regular price cells (rows 12-31)
+                    dot.style.cssText = 'width: 4px; height: 4px; background: rgba(255,255,255,0.3); border-radius: 50%; margin: auto;';
+                    cell.appendChild(dot);
+                }
+                
+                board.appendChild(cell);
+                targetCell = cell;
+            }
+
+            // Determine if this is a special cell
+            const isSpecialCell = targetCell.classList.contains('payout-cell') || 
+                                 targetCell.classList.contains('slump-cell') || 
+                                 targetCell.classList.contains('market-news-cell') ||
+                                 targetCell.classList.contains('bankrupt-cell');
+
+            console.log(`Cell at row ${row} is ${isSpecialCell ? 'SPECIAL' : 'normal'} (classes: ${targetCell.className})`);
+
+            // Create the peg element
+            const peg = document.createElement('div');
+            if (pegType === 'traveler') {
+                peg.className = 'traveler-peg';
+                if (isSpecialCell) {
+                    peg.classList.add('special-cell');
+                }
+                peg.textContent = 'T';
+                peg.title = `${company.name} Traveler - £${position}`;
+                
+                console.log(`Added TRAVELER peg for ${company.name} at £${position} (${isSpecialCell ? 'SPECIAL' : 'normal'} cell) - classes: ${peg.className}`);
+            } else {
+                peg.className = `player-peg peg-${company.id}`;
+                if (isSpecialCell) {
+                    peg.classList.add('special-cell');
+                }
+                peg.textContent = company.id.charAt(0).toUpperCase();
+                peg.title = `${company.name} Parent - £${position}`;
+                
+                console.log(`Added PARENT peg for ${company.name} at £${position} (${isSpecialCell ? 'SPECIAL' : 'normal'} cell) - classes: ${peg.className}`);
+            }
+            
+            targetCell.appendChild(peg);
+            console.log(`Peg successfully added to cell. Cell now has ${targetCell.children.length} children`);
+        }
+
+        function updateGameStatus() {
+            const currentColor = gameState.activeColors[gameState.currentPlayer];
+            const company = GAME_DATA.companies.find(c => c.id === currentColor);
+            document.getElementById('current-player-name').textContent = company ? company.name : 'Unknown';
+            document.getElementById('win-target').textContent = GAME_DATA.gameInfo.winTarget;
+            document.getElementById('cards-remaining').textContent = gameState.marketCards.length;
+            document.getElementById('insurance-remaining').textContent = gameState.insuranceCards.reduce((sum, card) => sum + card.quantity, 0);
+            document.getElementById('player-count').textContent = gameState.activeColors.length;
+        }
+
+        function rollDice() {
+            if (gameState.roundInProgress) {
+                logToConsole('Round in progress - please wait for round completion');
+                return;
+            }
+            
+            // First, allow current player to buy/sell shares (Rule 8a)
+            const currentPlayerColor = gameState.activeColors[gameState.currentPlayer];
+            const currentCompany = GAME_DATA.companies.find(c => c.id === currentPlayerColor);
+            
+            logToConsole(`${currentCompany.name}'s turn - considering trades...`);
+            
+            // AI decision making for computer players using personality system
+            setTimeout(() => {
+                // Double-check round isn't in progress before continuing
+                if (gameState.roundInProgress) {
+                    logToConsole('RULE VIOLATION: Round started during turn - this should not happen');
+                    return;
+                }
+                
+                // RULE 8A: Allow trading phase (personalities can choose to hold)
+                const decision = PersonalityTradingEngine.makeAIDecision(currentPlayerColor);
+                PersonalityTradingEngine.executeTrade(currentPlayerColor, decision);
+                
+                // MANDATORY DICE ROLL PHASE (Rule 7) - NO PLAYER CAN SKIP THIS
+                setTimeout(() => {
+                    if (gameState.roundInProgress) {
+                        logToConsole('CRITICAL ERROR: Round started during mandatory dice phase');
+                        return;
+                    }
+                    
+                    // AUTHENTIC RULE: Every player MUST roll dice after trading phase
+                    logToConsole(`${currentCompany.name} completes trading phase - MANDATORY dice roll follows`);
+                    
+                    const numberResult = Math.floor(Math.random() * 6) + 1;
+                    const colorResult = gameState.activeColors[Math.floor(Math.random() * gameState.activeColors.length)];
+                    
+                    document.getElementById('number-dice').textContent = numberResult;
+                    document.getElementById('last-number').textContent = numberResult;
+                    document.getElementById('last-color').textContent = colorResult.charAt(0).toUpperCase() + colorResult.slice(1);
+                    
+                    const company = GAME_DATA.companies.find(c => c.id === colorResult);
+                    const colorDice = document.getElementById('color-dice');
+                    colorDice.className = `color-dice ${company.className}`;
+                    
+                    logToConsole(`🎲 ${currentCompany.name} ROLLED ${numberResult} - ${company.name} traveller moves`);
+                    
+                    setTimeout(() => {
+                        // Execute peg movement - this cannot be skipped
+                        moveTravelerPeg(colorResult, numberResult);
+                    }, 500);
+                }, 1000);
+            }, 500);
+        }
+
+        function moveTravelerPeg(colorId, spaces) {
+            gameState.roundInProgress = true;
+            const company = GAME_DATA.companies.find(c => c.id === colorId);
+            const currentPos = gameState.travelerPositions[colorId];
+            let newPos = currentPos + (spaces * 10);
+            
+            logToConsole(`${company.name} traveler moves ${spaces} spaces from £${currentPos} to £${newPos}`);
+            
+            // Update traveller position - allow movement through ALL special cells
+            gameState.travelerPositions[colorId] = Math.max(10, newPos);
+            updateDisplays();
+            
+            // Check for special position effects based on landing position
+            if (newPos >= 200) {
+                // IMMEDIATE ROUND END - No other actions can interrupt (Rule 11)
+                gameState.roundInProgress = true;
+                logToConsole(`🛑 ${company.name} reached special cells above £200 (position: £${newPos}) - ROUND ENDS! 🛑`);
+                logToConsole(`Rule 11: Traveller reached top area - processing dividends immediately`);
+                
+                // End round after traveller is positioned
+                setTimeout(() => endRound(colorId, newPos), 1000);
+                return;
+            }
+            
+            // Continue with special position checks for lower board positions
+            
+            // Check special positions for lower board (only if below £200)
+            const currentTravelerPos = gameState.travelerPositions[colorId];
+            
+            if (currentTravelerPos === 190) {
+                // SLUMP position (Rule 10)
+                logToConsole(`${company.name} hit SLUMP at £190`);
+                setTimeout(() => handleSlump(colorId), 1000);
+                return;
+            }
+            
+            if (currentTravelerPos === 130) {
+                // Market News position (Rule 9a)
+                logToConsole(`${company.name} hit Market News at £130`);
+                setTimeout(() => handleMarketNews(colorId), 1000);
+                return;
+            }
+            
+            // Check for "M" markers that move to Market News (Rule 9b)
+            const specialMarkerPositions = [70, 110, 150]; // Example M positions
+            if (specialMarkerPositions.includes(currentTravelerPos)) {
+                logToConsole(`${company.name} hit M marker at £${currentTravelerPos} - moving to Market News`);
+                gameState.travelerPositions[colorId] = 130;
+                updateDisplays();
+                setTimeout(() => handleMarketNews(colorId), 1000);
+                return;
+            }
+            
+            logToConsole(`${company.name} traveler now at £${gameState.travelerPositions[colorId]} - turn continues normally`);
+            
+            // Move to next player
+            setTimeout(() => {
+                gameState.currentPlayer = (gameState.currentPlayer + 1) % gameState.activeColors.length;
+                gameState.roundInProgress = false;
+                updateDisplays();
+                
+                const nextPlayer = GAME_DATA.companies.find(c => c.id === gameState.activeColors[gameState.currentPlayer]);
+                logToConsole(`Round continues - next turn: ${nextPlayer.name}`);
+            }, 1000);
+        }
+
+        function handleSlump(colorId) {
+            const company = GAME_DATA.companies.find(c => c.id === colorId);
+            
+            if (gameState.antiSlumpCards[colorId] > 0) {
+                // Automatically use anti-slump card (basic rule)
+                gameState.antiSlumpCards[colorId]--;
+                logToConsole(`${company.name} used Anti-Slump Insurance card (automatic)`);
+                updateDisplays();
+                
+                // Move to next player after anti-slump card usage
+                setTimeout(() => {
+                    gameState.currentPlayer = (gameState.currentPlayer + 1) % gameState.activeColors.length;
+                    gameState.roundInProgress = false;
+                    updateDisplays();
+                    
+                    const nextPlayer = GAME_DATA.companies.find(c => c.id === gameState.activeColors[gameState.currentPlayer]);
+                    logToConsole(`Round continues - next turn: ${nextPlayer.name}`);
+                }, 1000);
+                return;
+            }
+            
+            // Fall back 6 spaces (60 points)
+            const currentPos = gameState.travelerPositions[colorId];
+            const newPos = Math.max(10, currentPos - 60);
+            gameState.travelerPositions[colorId] = newPos;
+            
+            logToConsole(`${company.name} hit SLUMP - fell to £${newPos}`);
+            updateDisplays();
+            
+            // Move to next player after slump processing
+            setTimeout(() => {
+                gameState.currentPlayer = (gameState.currentPlayer + 1) % gameState.activeColors.length;
+                gameState.roundInProgress = false;
+                updateDisplays();
+                
+                const nextPlayer = GAME_DATA.companies.find(c => c.id === gameState.activeColors[gameState.currentPlayer]);
+                logToConsole(`Round continues - next turn: ${nextPlayer.name}`);
+            }, 1000);
+        }
+
+        function handleMarketNews(colorId) {
+            const company = GAME_DATA.companies.find(c => c.id === colorId);
+            logToConsole(`${company.name} triggered Market News`);
+            
+            setTimeout(() => {
+                drawMarketCard(colorId);
+                
+                // Move to next player after market news processing
+                setTimeout(() => {
+                    gameState.currentPlayer = (gameState.currentPlayer + 1) % gameState.activeColors.length;
+                    gameState.roundInProgress = false;
+                    updateDisplays();
+                    
+                    const nextPlayer = GAME_DATA.companies.find(c => c.id === gameState.activeColors[gameState.currentPlayer]);
+                    logToConsole(`Round continues - next turn: ${nextPlayer.name}`);
+                }, 500);
+            }, 1000);
+        }
+
+        function endRound(colorId, finalPosition) {
+            const company = GAME_DATA.companies.find(c => c.id === colorId);
+            gameState.roundInProgress = true;
+            
+            logToConsole(`=== ROUND END: ${company.name} at £${finalPosition} ===`);
+            
+            // Determine dividend and parent peg movement per Rule 11
+            let dividend = 0;
+            let parentMoveSpaces = 0;
+            let dividendReason = '';
+            
+            // Map positions to dividend payouts based on the board layout
+            if (finalPosition >= 200) {
+                // Top of board (£20 payout row = row 2)
+                dividend = 20;
+                parentMoveSpaces = 2;
+                dividendReason = 'Top of board reached (£200+)';
+                logToConsole(`${dividendReason} - £20 dividend, parent moves up 2 spaces`);
+            } else if (finalPosition >= 190) {
+                // £15 payout row (row 4)
+                dividend = 15;
+                parentMoveSpaces = 1;
+                dividendReason = '£15 payout position (£190)';
+                logToConsole(`${dividendReason} - £15 dividend, parent moves up 1 space`);
+            } else if (finalPosition >= 170) {
+                // £10 payout row (row 5) - covers £170-£180 range
+                dividend = 10;
+                parentMoveSpaces = 1;
+                dividendReason = '£10 payout position (£170-£180)';
+                logToConsole(`${dividendReason} - £10 dividend, parent moves up 1 space`);
+            } else if (finalPosition >= 160) {
+                // £5 payout row (row 6) - covers £160 range
+                dividend = 5;
+                parentMoveSpaces = 1;
+                dividendReason = '£5 payout position (£160)';
+                logToConsole(`${dividendReason} - £5 dividend, parent moves up 1 space`);
+            } else if (finalPosition >= 125) {
+                // Regular £125 position - original rule
+                dividend = 5;
+                parentMoveSpaces = 1;
+                dividendReason = 'Standard £125+ position';
+                logToConsole(`${dividendReason} - £5 dividend, parent moves up 1 space`);
+            } else if (finalPosition < gameState.playerPositions[colorId]) {
+                // Fall from parent peg
+                dividend = 0;
+                parentMoveSpaces = -1;
+                dividendReason = 'Fall from parent peg';
+                logToConsole(`${dividendReason} - no dividend, parent moves down 1 space`);
+            } else {
+                // No dividend zone
+                dividend = 0;
+                parentMoveSpaces = 0;
+                dividendReason = 'No dividend zone';
+                logToConsole(`${dividendReason} - no dividend, no parent movement`);
+            }
+            
+            // Pay dividends to ALL shareholders (Rule 11)
+            if (dividend > 0) {
+                logToConsole(`=== PAYING DIVIDENDS ===`);
+                logToConsole(`Reason: ${dividendReason}`);
+                logToConsole(`Amount: £${dividend} per 100 shares of ${company.name}`);
+                
+                let totalDividendsPaid = 0;
+                gameState.activeColors.forEach(playerId => {
+                    const shares = gameState.playerShares[playerId][colorId] || 0;
+                    if (shares > 0) {
+                        const payment = shares * dividend;
+                        gameState.playerCash[playerId] += payment;
+                        totalDividendsPaid += payment;
+                        
+                        const playerCompany = GAME_DATA.companies.find(c => c.id === playerId);
+                        logToConsole(`💰 ${playerCompany.name} receives £${payment} (${shares} shares × £${dividend})`);
+                    }
+                });
+                
+                if (totalDividendsPaid === 0) {
+                    logToConsole(`No dividends paid - no shareholders own ${company.name} stock`);
+                } else {
+                    logToConsole(`Total dividends paid: £${totalDividendsPaid}`);
+                }
+            } else {
+                logToConsole(`No dividends paid: ${dividendReason}`);
+            }
+            
+            // Move parent peg (Rule 11)
+            if (parentMoveSpaces !== 0) {
+                const oldParentPos = gameState.playerPositions[colorId];
+                const newParentPos = Math.max(10, Math.min(200, oldParentPos + (parentMoveSpaces * 10)));
+                gameState.playerPositions[colorId] = newParentPos;
+                
+                const direction = parentMoveSpaces > 0 ? 'up' : 'down';
+                logToConsole(`📈 ${company.name} parent peg moves ${direction}: £${oldParentPos} → £${newParentPos}`);
+                
+                // Check for bonus shares at £200 (Rule 12)
+                if (newParentPos >= 200) {
+                    logToConsole(`🎉 ${company.name} parent peg reached £200 - triggering bonus shares! 🎉`);
+                    
+                    // First check if anyone has won before bonus shares
+                    updateDisplays();
+                    if (checkWinCondition()) {
+                        return; // Game ends, someone won
+                    }
+                    
+                    // If no winner, proceed with bonus shares and reset
+                    handleBonusShares(colorId);
+                    logToConsole(`Game continues after bonus share issue`);
+                }
+            } else {
+                logToConsole(`${company.name} parent peg stays at £${gameState.playerPositions[colorId]}`);
+            }
+            
+            // Return traveler peg to parent peg (Rule 11)
+            gameState.travelerPositions[colorId] = gameState.playerPositions[colorId];
+            logToConsole(`🔄 ${company.name} traveler returns to parent peg at £${gameState.playerPositions[colorId]}`);
+            
+            // CRITICAL RULE 11: Reset ALL other traveler pegs to their parent pegs
+            logToConsole(`🔄 RULE 11: Resetting ALL traveler pegs to parent pegs`);
+            gameState.activeColors.forEach(resetColorId => {
+                if (resetColorId !== colorId) { // Don't reset the company that just finished
+                    const resetCompany = GAME_DATA.companies.find(c => c.id === resetColorId);
+                    const oldTravelerPos = gameState.travelerPositions[resetColorId];
+                    gameState.travelerPositions[resetColorId] = gameState.playerPositions[resetColorId];
+                    logToConsole(`🔄 ${resetCompany.name} traveler: £${oldTravelerPos} → £${gameState.travelerPositions[resetColorId]} (parent)`);
+                }
+            });
+            
+            // Check for bankruptcy (Rule 13)
+            if (gameState.playerPositions[colorId] <= 10) {
+                handleBankruptcy(colorId);
+                return;
+            }
+            
+            updateDisplays();
+            
+            // Check win condition after all processing
+            if (!checkWinCondition()) {
+                // Show leaderboard update after round completion
+                setTimeout(() => {
+                    logToConsole(`=== LEADERBOARD UPDATE ===`);
+                    const playerData = [];
+                    gameState.activeColors.forEach(colorId => {
+                        const company = GAME_DATA.companies.find(c => c.id === colorId);
+                        const cash = gameState.playerCash[colorId] || 0;
+                        const shareValue = calculateShareValue(colorId);
+                        const netWorth = cash + shareValue;
+                        playerData.push({ company, netWorth, cash, shareValue });
+                    });
+                    
+                    playerData.sort((a, b) => b.netWorth - a.netWorth);
+                    playerData.forEach((data, index) => {
+                        const rank = index === 0 ? '👑' : index === 1 ? '🥈' : index === 2 ? '🥉' : `${index + 1}.`;
+                        logToConsole(`${rank} ${data.company.name}: £${data.netWorth} (£${data.cash} cash + £${data.shareValue} shares)`);
+                    });
+                    logToConsole(`=== END LEADERBOARD ===`);
+                }, 1000);
+                
+                // Move to next player
+                setTimeout(() => {
+                    gameState.currentPlayer = (gameState.currentPlayer + 1) % gameState.activeColors.length;
+                    gameState.roundInProgress = false;
+                    updateDisplays();
+                    
+                    const nextPlayer = GAME_DATA.companies.find(c => c.id === gameState.activeColors[gameState.currentPlayer]);
+                    logToConsole(`NEW ROUND STARTS - first turn: ${nextPlayer.name}`);
+                    logToConsole(`=== ROUND COMPLETE ===`);
+                }, 2000);
+            }
+        }
+
+        function handleBankruptcy(colorId) {
+            const company = GAME_DATA.companies.find(c => c.id === colorId);
+            logToConsole(`💀 ${company.name} IS BANKRUPT! 💀`);
+            logToConsole(`All ${company.name} shares are now worthless`);
+            
+            // Track bankruptcies
+            gameState.bankruptCompanies.push({
+                company: company.name,
+                round: gameState.gameRounds + 1
+            });
+            
+            // Remove company from active play
+            gameState.activeColors = gameState.activeColors.filter(id => id !== colorId);
+            
+            // Remove all shares of this company from all players
+            gameState.activeColors.forEach(playerId => {
+                if (gameState.playerShares[playerId][colorId] > 0) {
+                    const lostShares = gameState.playerShares[playerId][colorId];
+                    gameState.playerShares[playerId][colorId] = 0;
+                    
+                    const playerCompany = GAME_DATA.companies.find(c => c.id === playerId);
+                    logToConsole(`${playerCompany.name} loses ${lostShares} worthless ${company.name} shares`);
+                }
+            });
+            
+            // Remove pegs from board
+            gameState.playerPositions[colorId] = 0;
+            gameState.travelerPositions[colorId] = 0;
+            
+            updateDisplays();
+            
+            // Check game continuation
+            if (gameState.activeColors.length <= 1) {
+                logToConsole(`=== GAME ENDS - ONLY ${gameState.activeColors.length} COMPANY SURVIVING ===`);
+                
+                if (gameState.activeColors.length === 1) {
+                    const survivorId = gameState.activeColors[0];
+                    const survivor = GAME_DATA.companies.find(c => c.id === survivorId);
+                    const survivorWealth = gameState.playerCash[survivorId] + calculateShareValue(survivorId);
+                    
+                    logToConsole(`🏆 ${survivor.name} WINS BY SURVIVAL! 🏆`);
+                    logToConsole(`Final wealth: £${survivorWealth}`);
+                    
+                    if (isAutoPlaying) toggleAutoPlay();
+                    alert(`🏆 ${survivor.name} WINS BY SURVIVAL!\n\nAll other companies went bankrupt\nFinal wealth: £${survivorWealth}\nBankruptcies: ${gameState.bankruptCompanies.map(b => b.company).join(', ')}`);
+                } else {
+                    logToConsole(`💀 ALL COMPANIES BANKRUPT! 💀`);
+                    if (isAutoPlaying) toggleAutoPlay();
+                    alert('💀 GAME OVER - ALL COMPANIES BANKRUPT! 💀\n\nNo survivors remain in the market');
+                }
+            } else {
+                logToConsole(`Game continues with ${gameState.activeColors.length} companies remaining`);
+            }
+        }
+
+        function handleBonusShares(colorId) {
+            const company = GAME_DATA.companies.find(c => c.id === colorId);
+            gameState.totalBonusIssues++;
+            
+            logToConsole(`🎉 ${company.name} BONUS SHARES! (Issue #${gameState.totalBonusIssues}) 🎉`);
+            
+            // Calculate total shares to be issued
+            let totalCurrentShares = 0;
+            gameState.activeColors.forEach(playerId => {
+                const currentShares = gameState.playerShares[playerId][colorId] || 0;
+                totalCurrentShares += currentShares;
+            });
+            
+            // Check if we have enough certificates (Rule 12)
+            const maxCertificatesAvailable = 10; // 10 certificates per company
+            const totalAfterBonus = totalCurrentShares * 2;
+            
+            if (totalAfterBonus > maxCertificatesAvailable) {
+                // Pay cash instead (Rule 12 note)
+                logToConsole(`Insufficient certificates - paying cash at £100 per share`);
+                
+                gameState.activeColors.forEach(playerId => {
+                    const currentShares = gameState.playerShares[playerId][colorId] || 0;
+                    if (currentShares > 0) {
+                        const cashPayment = currentShares * 100;
+                        gameState.playerCash[playerId] += cashPayment;
+                        
+                        const playerCompany = GAME_DATA.companies.find(c => c.id === playerId);
+                        logToConsole(`${playerCompany.name}: ${currentShares} shares → £${cashPayment} cash`);
+                    }
+                });
+            } else {
+                // Issue actual bonus shares (Rule 12)
+                logToConsole(`Issuing ${totalCurrentShares} bonus shares 1-for-1`);
+                
+                gameState.activeColors.forEach(playerId => {
+                    const currentShares = gameState.playerShares[playerId][colorId] || 0;
+                    if (currentShares > 0) {
+                        gameState.playerShares[playerId][colorId] = currentShares * 2;
+                        
+                        const playerCompany = GAME_DATA.companies.find(c => c.id === playerId);
+                        logToConsole(`${playerCompany.name}: ${currentShares} → ${currentShares * 2} shares`);
+                    }
+                });
+            }
+            
+            // Lower market value to £100 PAR (Rule 12)
+            gameState.playerPositions[colorId] = 100;
+            gameState.travelerPositions[colorId] = 100;
+            logToConsole(`${company.name} market value reset to £100 PAR`);
+        }
+
+        function drawMarketCard(affectedColorId = null) {
+            let cardPool = [];
+            
+            // Check if market news deck is empty and reshuffle
+            if (gameState.marketCards.length === 0) {
+                logToConsole('Market News deck empty - reshuffling all cards');
+                gameState.marketCards = [...GAME_DATA.marketNewsCards];
+            }
+            
+            // Add market news cards
+            gameState.marketCards.forEach(card => cardPool.push({...card, type: 'market'}));
+            
+            // Add insurance cards
+            gameState.insuranceCards.forEach(card => {
+                for (let i = 0; i < card.quantity; i++) {
+                    cardPool.push({...card, type: 'insurance'});
+                }
+            });
+            
+            if (cardPool.length === 0) {
+                logToConsole('No more cards available');
+                return;
+            }
+            
+            const cardIndex = Math.floor(Math.random() * cardPool.length);
+            const drawnCard = cardPool[cardIndex];
+            
+            // Remove card from appropriate deck
+            if (drawnCard.type === 'market') {
+                gameState.marketCards = gameState.marketCards.filter(card => card.id !== drawnCard.id);
+            } else {
+                const insuranceCard = gameState.insuranceCards.find(card => card.id === drawnCard.id);
+                if (insuranceCard && insuranceCard.quantity > 0) {
+                    insuranceCard.quantity--;
+                    if (insuranceCard.quantity === 0) {
+                        gameState.insuranceCards = gameState.insuranceCards.filter(card => card.id !== drawnCard.id);
+                    }
+                }
+            }
+            
+            // Display card
+            document.getElementById('current-card').innerHTML = `
+                <strong>${drawnCard.type === 'insurance' ? 'Insurance Card!' : 'Market News!'}</strong><br>
+                ${drawnCard.title}
+            `;
+            
+            // Apply card effect
+            applyCardEffect(drawnCard, affectedColorId);
+            
+            updateDisplays();
+            logToConsole(`Drew card: ${drawnCard.title}`);
+        }
+
+        function applyCardEffect(card, affectedColorId) {
+            if (!affectedColorId) {
+                // Pick random active company if none specified
+                affectedColorId = gameState.activeColors[Math.floor(Math.random() * gameState.activeColors.length)];
+            }
+            
+            const company = GAME_DATA.companies.find(c => c.id === affectedColorId);
+            
+            switch (card.effect) {
+                case 'traveler_advance':
+                    const currentPos = gameState.travelerPositions[affectedColorId];
+                    gameState.travelerPositions[affectedColorId] = Math.min(300, currentPos + (card.value * 10));
+                    logToConsole(`${company.name} traveler advances ${card.value} spaces`);
+                    break;
+                    
+                case 'traveler_retreat':
+                    const currentPosRetreat = gameState.travelerPositions[affectedColorId];
+                    gameState.travelerPositions[affectedColorId] = Math.max(10, currentPosRetreat - (card.value * 10));
+                    logToConsole(`${company.name} traveler retreats ${card.value} spaces`);
+                    break;
+                    
+                case 'traveler_to_parent':
+                    gameState.travelerPositions[affectedColorId] = gameState.playerPositions[affectedColorId];
+                    logToConsole(`${company.name} traveler returns to parent peg`);
+                    break;
+                    
+                case 'parent_up':
+                    gameState.playerPositions[affectedColorId] = Math.min(200, gameState.playerPositions[affectedColorId] + (card.value * 10));
+                    logToConsole(`${company.name} parent peg moves up ${card.value} spaces`);
+                    break;
+                    
+                case 'parent_down':
+                    gameState.playerPositions[affectedColorId] = Math.max(10, gameState.playerPositions[affectedColorId] - (card.value * 10));
+                    logToConsole(`${company.name} parent peg moves down ${card.value} spaces`);
+                    break;
+                    
+                case 'dividend_percentage':
+                    gameState.activeColors.forEach(playerId => {
+                        const shares = gameState.playerShares[playerId][affectedColorId] || 0;
+                        if (shares > 0) {
+                            const payment = Math.floor((gameState.playerPositions[affectedColorId] * card.value / 100) * shares);
+                            gameState.playerCash[playerId] += payment;
+                            const playerCompany = GAME_DATA.companies.find(c => c.id === playerId);
+                            logToConsole(`${playerCompany.name} receives £${payment} special dividend from ${company.name}`);
+                        }
+                    });
+                    break;
+                    
+                case 'anti_slump_protection':
+                    gameState.antiSlumpCards[affectedColorId] += card.value;
+                    logToConsole(`${company.name} receives Anti-Slump Insurance card`);
+                    break;
+            }
+        }
+
+        function buyShares() {
+            const currentColorId = gameState.activeColors[gameState.currentPlayer];
+            const currentCompany = GAME_DATA.companies.find(c => c.id === currentColorId);
+            
+            // Show available companies (only active ones)
+            let companyOptions = '';
+            gameState.activeColors.forEach((companyId, index) => {
+                const company = GAME_DATA.companies.find(c => c.id === companyId);
+                const price = gameState.playerPositions[companyId];
+                companyOptions += `${index + 1}. ${company.name} - £${price}\n`;
+            });
+            
+            const choice = prompt(`${currentCompany.name}: Choose company to buy shares:\n\n${companyOptions}\nEnter number (1-${gameState.activeColors.length}):`);
+            if (!choice) return;
+            
+            const companyIndex = parseInt(choice) - 1;
+            if (companyIndex < 0 || companyIndex >= gameState.activeColors.length) {
+                logToConsole('Invalid company choice');
+                return;
+            }
+            
+            const targetColorId = gameState.activeColors[companyIndex];
+            const targetCompany = GAME_DATA.companies.find(c => c.id === targetColorId);
+            const sharePrice = gameState.playerPositions[targetColorId];
+            const totalCost = sharePrice + GAME_DATA.gameInfo.brokerageFee;
+            
+            if (gameState.playerCash[currentColorId] < totalCost) {
+                logToConsole(`${currentCompany.name}: Not enough cash. Need £${totalCost} (£${sharePrice} + £${GAME_DATA.gameInfo.brokerageFee} fee)`);
+                return;
+            }
+            
+            // Complete transaction
+            gameState.playerCash[currentColorId] -= totalCost;
+            gameState.playerShares[currentColorId][targetColorId] = (gameState.playerShares[currentColorId][targetColorId] || 0) + 1;
+            
+            logToConsole(`${currentCompany.name} bought 1 ${targetCompany.name} share for £${totalCost} total`);
+            updateDisplays();
+        }
+
+        function sellShares() {
+            const currentColorId = gameState.activeColors[gameState.currentPlayer];
+            const currentCompany = GAME_DATA.companies.find(c => c.id === currentColorId);
+            const playerShares = gameState.playerShares[currentColorId] || {};
+            
+            // Find companies where player owns shares (only active companies)
+            let ownedOptions = '';
+            let ownedCompanies = [];
+            
+            gameState.activeColors.forEach(companyId => {
+                const company = GAME_DATA.companies.find(c => c.id === companyId);
+                const shares = playerShares[companyId] || 0;
+                if (shares > 0) {
+                    const price = gameState.playerPositions[companyId];
+                    ownedOptions += `${ownedCompanies.length + 1}. ${company.name} - ${shares} shares @ £${price}\n`;
+                    ownedCompanies.push(companyId);
+                }
+            });
+            
+            if (ownedCompanies.length === 0) {
+                logToConsole(`${currentCompany.name}: No shares to sell`);
+                return;
+            }
+            
+            const choice = prompt(`${currentCompany.name}: Choose company to sell shares:\n\n${ownedOptions}\nEnter number (1-${ownedCompanies.length}):`);
+            if (!choice) return;
+            
+            const companyIndex = parseInt(choice) - 1;
+            if (companyIndex < 0 || companyIndex >= ownedCompanies.length) {
+                logToConsole('Invalid company choice');
+                return;
+            }
+            
+            const targetColorId = ownedCompanies[companyIndex];
+            const targetCompany = GAME_DATA.companies.find(c => c.id === targetColorId);
+            const sharePrice = gameState.playerPositions[targetColorId];
+            
+            // Complete transaction
+            gameState.playerCash[currentColorId] += sharePrice;
+            gameState.playerShares[currentColorId][targetColorId] -= 1;
+            
+            logToConsole(`${currentCompany.name} sold 1 ${targetCompany.name} share for £${sharePrice}`);
+            updateDisplays();
+        }
+
+        function checkWinCondition() {
+            for (let colorId of gameState.activeColors) {
+                const cash = gameState.playerCash[colorId];
+                const shareValue = calculateShareValue(colorId);
+                const netWorth = cash + shareValue;
+                const company = GAME_DATA.companies.find(c => c.id === colorId);
+                
+                if (netWorth >= GAME_DATA.gameInfo.winTarget) {
+                    const personality = PersonalityTradingEngine.getPersonality(colorId);
+                    const personalityName = personality ? `${personality.emoji} ${personality.name}` : 'Unknown';
+                    
+                    logToConsole(`🎉 ${company.name} (${personalityName}) WINS with £${netWorth} total wealth!`);
+                    logToConsole(`Cash: £${cash} | Shares: £${shareValue} | Total: £${netWorth}`);
+                    if (isAutoPlaying) toggleAutoPlay();
+                    alert(`🎉 ${company.name} wins the game!\n\nPersonality: ${personalityName}\nFinal wealth: £${netWorth}\nCash: £${cash}\nShares: £${shareValue}\nTarget was: £${GAME_DATA.gameInfo.winTarget}`);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function newGame() {
+            if (confirm('Start a new game? All progress will be lost.')) {
+                logToConsole('=== NEW GAME STARTING ===');
+                
+                // Allow player to choose active companies
+                const companyNames = GAME_DATA.companies.map(c => c.name).join('\n');
+                const playerCount = prompt(`How many companies should play? (3-6)\n\nAvailable companies:\n${companyNames}\n\nEnter number:`, '4');
+                
+                if (playerCount && playerCount >= 3 && playerCount <= 6) {
+                    gameState.activeColors = GAME_DATA.companies.slice(0, parseInt(playerCount)).map(c => c.id);
+                } else {
+                    gameState.activeColors = ['yellow', 'red', 'blue', 'green']; // Default
+                }
+                
+                logToConsole(`Selected ${gameState.activeColors.length} companies: ${gameState.activeColors.join(', ')}`);
+                
+                // Allow player to set win target
+                const targetInput = prompt(`Set win target (Rule 14: cash + shares at market value):\n\nOriginal game: £600\nLonger game: £1500-£3000\nMarathon: £5000+\n\nEnter target amount:`, '600');
+                
+                if (targetInput && parseInt(targetInput) >= 600) {
+                    GAME_DATA.gameInfo.winTarget = parseInt(targetInput);
+                } else {
+                    GAME_DATA.gameInfo.winTarget = 600; // Default
+                }
+                
+                logToConsole(`Win target set to: £${GAME_DATA.gameInfo.winTarget}`);
+                
+                // Initialize the game with the selected companies
+                initializeGame();
+                
+                logToConsole(`New game started with ${gameState.activeColors.length} companies`);
+                logToConsole(`WIN TARGET: £${GAME_DATA.gameInfo.winTarget} total capital (cash + shares)`);
+                
+                // Show assigned personalities
+                showPersonalities();
+            }
+        }
+
+        function toggleAutoPlay() {
+            const button = document.getElementById('play-pause-btn');
+            if (isAutoPlaying) {
+                clearInterval(autoPlayInterval);
+                autoPlayInterval = null;
+                isAutoPlaying = false;
+                button.textContent = '▶️ Auto Play';
+                button.style.background = '#fbbf24';
+                logToConsole('Auto-play stopped');
+            } else {
+                isAutoPlaying = true;
+                button.textContent = '⏸️ Stop Auto';
+                button.style.background = '#ef4444';
+                logToConsole('Auto-play started');
+                
+                // Adjust speed based on game target (but respect user's base speed choice)
+                let adjustedSpeed = autoPlaySpeed;
+                if (GAME_DATA.gameInfo.winTarget >= 3000) {
+                    adjustedSpeed = Math.max(125, autoPlaySpeed * 0.5);
+                    logToConsole(`Auto-play speed increased for high target (£${GAME_DATA.gameInfo.winTarget}) - now ${(adjustedSpeed/1000).toFixed(2)}s per turn`);
+                } else if (GAME_DATA.gameInfo.winTarget >= 1500) {
+                    adjustedSpeed = Math.max(125, autoPlaySpeed * 0.75);
+                    logToConsole(`Auto-play speed adjusted for extended target (£${GAME_DATA.gameInfo.winTarget}) - now ${(adjustedSpeed/1000).toFixed(2)}s per turn`);
+                }
+                
+                autoPlayInterval = setInterval(() => {
+                    if (!gameState.roundInProgress) {
+                        rollDice();
+                    }
+                }, adjustedSpeed);
+            }
+        }
+
+        function updateAutoPlaySpeed() {
+            const slider = document.getElementById('speed-slider');
+            const display = document.getElementById('speed-display');
+            autoPlaySpeed = parseInt(slider.value);
+            
+            // Format display based on speed
+            if (autoPlaySpeed < 1000) {
+                display.textContent = `${(autoPlaySpeed / 1000).toFixed(2)}s`;
+            } else {
+                display.textContent = `${(autoPlaySpeed / 1000).toFixed(1)}s`;
+            }
+            
+            // Update active auto-play interval if running
+            if (isAutoPlaying) {
+                clearInterval(autoPlayInterval);
+                autoPlayInterval = setInterval(() => {
+                    if (!gameState.roundInProgress) {
+                        rollDice();
+                    }
+                }, autoPlaySpeed);
+                
+                // Log speed change for user feedback
+                if (autoPlaySpeed <= 250) {
+                    logToConsole(`⚡ Speed set to LIGHTNING FAST (${(autoPlaySpeed/1000).toFixed(2)}s per turn)`);
+                } else if (autoPlaySpeed <= 500) {
+                    logToConsole(`🚀 Speed set to VERY FAST (${(autoPlaySpeed/1000).toFixed(2)}s per turn)`);
+                } else if (autoPlaySpeed <= 1000) {
+                    logToConsole(`⚡ Speed set to FAST (${(autoPlaySpeed/1000).toFixed(1)}s per turn)`);
+                } else if (autoPlaySpeed <= 2000) {
+                    logToConsole(`⚖️ Speed set to NORMAL (${(autoPlaySpeed/1000).toFixed(1)}s per turn)`);
+                } else if (autoPlaySpeed <= 3500) {
+                    logToConsole(`🐌 Speed set to SLOW (${(autoPlaySpeed/1000).toFixed(1)}s per turn)`);
+                } else {
+                    logToConsole(`🐢 Speed set to VERY SLOW (${(autoPlaySpeed/1000).toFixed(1)}s per turn)`);
+                }
+            }
+        }
+
+        // Initialize the game
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeBoard();
+            logToConsole('Flutter Stock Exchange Game v5.0 - AI Personality System loaded');
+            logToConsole('Based on authentic 1966 J.W. Spear & Sons rules');
+            logToConsole('NEW: AI personalities randomly assigned each game');
+            logToConsole('Features 10 distinct AI trading personalities');
+            logToConsole('Click "New Game" to start with random AI personalities!');
+        });
+    </script>
+</body>
+</html>

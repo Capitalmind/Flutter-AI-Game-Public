@@ -1,0 +1,22 @@
+{
+    "id": "opportunist",
+    "name": "Opportunist",
+    "description": "Adapts strategy based on market conditions and opportunities",
+    "riskTolerance": 0.6,
+    "aggressiveness": 0.6,
+    "diversificationPreference": 0.5,
+    "cashReserveTarget": 0.2,
+    "tradingFrequency": 0.7,
+    "priceThresholds": {
+        "buyBelow": 115,
+        "sellAbove": 175,
+        "panicSellAt": 190,
+        "bargainBuyAt": 85
+    },
+    "dividendFocus": 0.5,
+    "momentumTrading": 0.6,
+    "contrarian": 0.4,
+    "maxPositionSize": 0.4,
+    "stopLossThreshold": 0.15,
+    "emoji": "🎯"
+} 

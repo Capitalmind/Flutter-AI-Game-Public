@@ -1,0 +1,1001 @@
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £190 -> row 13, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 13 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £190 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£100, traveler=£230
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £100 -> row 22, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 22 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £100 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £230 -> row 4, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 4 is SPECIAL (classes: board-cell green-lane payout-cell)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £230 (SPECIAL cell) - classes: traveler-peg special-cell
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£100, traveler=£100
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £100 -> row 22, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 22 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £100 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £100 -> row 22, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 22 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £100 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£100, traveler=£100
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £100 -> row 22, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 22 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £100 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £100 -> row 22, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 22 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £100 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£100, traveler=£130
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £100 -> row 22, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 22 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £100 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £130 -> row 19, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 19 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £130 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£100, traveler=£100
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £100 -> row 22, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 22 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £100 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £100 -> row 22, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 22 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £100 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£100, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £100 -> row 22, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 22 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £100 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £140 -> row 18, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£100, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £100 -> row 22, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 22 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £100 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £140 -> row 18, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£100, traveler=£150
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £100 -> row 22, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 22 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £100 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £150 -> row 17, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 17 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £150 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£100, traveler=£130
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £100 -> row 22, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 22 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £100 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £130 -> row 19, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 19 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £130 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£100, traveler=£200
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £100 -> row 22, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 22 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £100 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £200 -> row 12, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 12 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £200 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£100, traveler=£200
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £100 -> row 22, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 22 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £100 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £200 -> row 12, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 12 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £200 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£180
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £180 -> row 14, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 14 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £180 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£100, traveler=£200
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £100 -> row 22, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 22 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £100 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £200 -> row 12, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 12 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £200 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£180
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £180 -> row 14, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 14 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £180 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£100, traveler=£230
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £100 -> row 22, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 22 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £100 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £230 -> row 4, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 4 is SPECIAL (classes: board-cell blue-lane payout-cell)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £230 (SPECIAL cell) - classes: traveler-peg special-cell
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£180
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £180 -> row 14, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 14 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £180 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £120 -> row 20, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £120 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £120 -> row 20, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £120 -> row 20, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £120 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £120 -> row 20, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£120, traveler=£130
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £120 -> row 20, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £120 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £130 -> row 19, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 19 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £130 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£120, traveler=£110
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £120 -> row 20, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £120 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £110 -> row 21, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 21 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £110 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£160
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £160 -> row 16, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 16 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £160 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£120, traveler=£110
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £120 -> row 20, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £120 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £110 -> row 21, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 21 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £110 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£160
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £160 -> row 16, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 16 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £160 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£120, traveler=£110
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £120 -> row 20, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £120 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £110 -> row 21, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 21 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £110 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£190
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £190 -> row 13, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 13 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £190 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£120, traveler=£110
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £120 -> row 20, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £120 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £110 -> row 21, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 21 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £110 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£130
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £130 -> row 19, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 19 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £130 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£120, traveler=£110
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £120 -> row 20, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £120 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £110 -> row 21, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 21 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £110 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£130
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £130 -> row 19, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 19 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £130 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£120, traveler=£160
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £120 -> row 20, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £120 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £160 -> row 16, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 16 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £160 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£130
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £130 -> row 19, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 19 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £130 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£120, traveler=£160
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £120 -> row 20, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £120 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £160 -> row 16, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 16 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £160 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£130
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £130 -> row 19, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 19 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £130 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£120, traveler=£220
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £120 -> row 20, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £120 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £220 -> row 3, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 3 is SPECIAL (classes: board-cell blue-lane slump-cell)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £220 (SPECIAL cell) - classes: traveler-peg special-cell
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+flutter_game_with_personalities_4.html:1700 === UPDATING PEG POSITIONS ===
+flutter_game_with_personalities_4.html:1704 Removing 8 existing pegs
+flutter_game_with_personalities_4.html:1708 Active companies: yellow, red, blue, green
+flutter_game_with_personalities_4.html:1720 Fairfit Furniture Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Fairfit Furniture Company at £140 (normal cell) - classes: player-peg peg-yellow
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Fairfit Furniture Company at £140 -> row 18, column 1
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell yellow-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Fairfit Furniture Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Atomic Airways Company: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Atomic Airways Company at £140 (normal cell) - classes: player-peg peg-red
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Atomic Airways Company at £140 -> row 18, column 2
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell red-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Atomic Airways Company at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Easygoing Engineering Co.: parent=£140, traveler=£140
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Easygoing Engineering Co. at £140 -> row 18, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Easygoing Engineering Co. at £140 (normal cell) - classes: player-peg peg-blue
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Easygoing Engineering Co. at £140 -> row 18, column 3
+flutter_game_with_personalities_4.html:1855 Cell at row 18 is normal (classes: board-cell blue-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Easygoing Engineering Co. at £140 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1720 Diggers Diamond Mines: parent=£120, traveler=£120
+flutter_game_with_personalities_4.html:1777 Adding parent peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1876 Added PARENT peg for Diggers Diamond Mines at £120 (normal cell) - classes: player-peg peg-green
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 2 children
+flutter_game_with_personalities_4.html:1777 Adding traveler peg for Diggers Diamond Mines at £120 -> row 20, column 5
+flutter_game_with_personalities_4.html:1855 Cell at row 20 is normal (classes: board-cell green-lane)
+flutter_game_with_personalities_4.html:1867 Added TRAVELER peg for Diggers Diamond Mines at £120 (normal cell) - classes: traveler-peg
+flutter_game_with_personalities_4.html:1880 Peg successfully added to cell. Cell now has 3 children
+flutter_game_with_personalities_4.html:1732 Total pegs now on board: 8
+flutter_game_with_personalities_4.html:1733 === PEG UPDATE COMPLETE ===
+

@@ -1,0 +1,22 @@
+{
+    "id": "balancedTrader",
+    "name": "Balanced Trader",
+    "description": "Moderate risk with balanced approach to growth and income",
+    "riskTolerance": 0.5,
+    "aggressiveness": 0.5,
+    "diversificationPreference": 0.6,
+    "cashReserveTarget": 0.25,
+    "tradingFrequency": 0.6,
+    "priceThresholds": {
+        "buyBelow": 110,
+        "sellAbove": 170,
+        "panicSellAt": 185,
+        "bargainBuyAt": 85
+    },
+    "dividendFocus": 0.6,
+    "momentumTrading": 0.5,
+    "contrarian": 0.3,
+    "maxPositionSize": 0.4,
+    "stopLossThreshold": 0.2,
+    "emoji": "⚖️"
+} 

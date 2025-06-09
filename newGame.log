@@ -1,0 +1,312 @@
+Flutter Game Console v5.0 - AI Personalities
+Console cleared...
+[14:16:50] === NEW GAME STARTING ===
+[14:16:51] Selected 4 companies: yellow, red, blue, green
+[14:16:52] Win target set to: £600
+[14:16:52] === INITIALIZING FRESH GAME STATE ===
+[14:16:52] Fairfit Furniture Company: £300 cash, 0 shares
+[14:16:52] Atomic Airways Company: £300 cash, 0 shares
+[14:16:52] Easygoing Engineering Co.: £300 cash, 0 shares
+[14:16:52] Diggers Diamond Mines: £300 cash, 0 shares
+[14:16:52] Fairfit Furniture Company assigned personality: ⚡ Day Trader
+[14:16:52] Atomic Airways Company assigned personality: 🚀 Aggressive Speculator
+[14:16:52] Easygoing Engineering Co. assigned personality: 🔄 Contrarian Investor
+[14:16:52] Diggers Diamond Mines assigned personality: ⚡ Day Trader
+[14:16:52] Game initialized with 4 active companies
+[14:16:52] Starting money: £300 | Win target: £600
+[14:16:52] VERIFIED: All players start with £300 cash and ZERO shares
+[14:16:52] New game started with 4 companies
+[14:16:52] WIN TARGET: £600 total capital (cash + shares)
+[14:16:52] === CURRENT AI PERSONALITIES ===
+[14:16:52] Fairfit Furniture Company: ⚡ Day Trader
+[14:16:52] Strategy: Extremely active trader making frequent small-profit trades
+[14:16:52] Risk: 80% | Active: 95% | Frequency: 95%
+[14:16:52] Atomic Airways Company: 🚀 Aggressive Speculator
+[14:16:52] Strategy: High-risk, high-reward momentum trader seeking maximum returns
+[14:16:52] Risk: 90% | Active: 90% | Frequency: 90%
+[14:16:52] Easygoing Engineering Co.: 🔄 Contrarian Investor
+[14:16:52] Strategy: Buys when others sell, sells when others buy - opposite of crowd
+[14:16:52] Risk: 70% | Active: 60% | Frequency: 50%
+[14:16:52] Diggers Diamond Mines: ⚡ Day Trader
+[14:16:52] Strategy: Extremely active trader making frequent small-profit trades
+[14:16:52] Risk: 80% | Active: 95% | Frequency: 95%
+[14:16:52] === END PERSONALITIES ===
+[14:16:59] Auto-play started
+[14:17:00] Fairfit Furniture Company's turn - considering trades...
+[14:17:00] Fairfit Furniture Company's turn - considering trades...
+[14:17:00] Fairfit Furniture Company's turn - considering trades...
+[14:17:00] Fairfit Furniture Company's turn - considering trades...
+[14:17:00] Fairfit Furniture Company's turn - considering trades...
+[14:17:00] Fairfit Furniture Company bought Fairfit Furniture Company for £105 - ⚡ extreme value
+[14:17:00] Fairfit Furniture Company's turn - considering trades...
+[14:17:00] Fairfit Furniture Company bought Fairfit Furniture Company for £105 - ⚡ extreme value
+[14:17:00] Fairfit Furniture Company's turn - considering trades...
+[14:17:00] Fairfit Furniture Company: ⚡ No trading opportunities (cash: 31% - dice roll still mandatory)
+[14:17:00] Fairfit Furniture Company's turn - considering trades...
+[14:17:00] Fairfit Furniture Company: ⚡ No trading opportunities (cash: 31% - dice roll still mandatory)
+[14:17:01] Fairfit Furniture Company's turn - considering trades...
+[14:17:01] Fairfit Furniture Company: ⚡ No trading opportunities (cash: 31% - dice roll still mandatory)
+[14:17:01] Fairfit Furniture Company's turn - considering trades...
+[14:17:01] Fairfit Furniture Company: ⚡ No trading opportunities (cash: 31% - dice roll still mandatory)
+[14:17:01] Fairfit Furniture Company's turn - considering trades...
+[14:17:01] Fairfit Furniture Company: ⚡ No trading opportunities (cash: 31% - dice roll still mandatory)
+[14:17:01] Fairfit Furniture Company's turn - considering trades...
+[14:17:01] Fairfit Furniture Company: ⚡ No trading opportunities (cash: 31% - dice roll still mandatory)
+[14:17:01] Fairfit Furniture Company's turn - considering trades...
+[14:17:01] Fairfit Furniture Company: ⚡ No trading opportunities (cash: 31% - dice roll still mandatory)
+[14:17:01] Fairfit Furniture Company completes trading phase - MANDATORY dice roll follows
+[14:17:01] 🎲 Fairfit Furniture Company ROLLED 6 - Fairfit Furniture Company traveller moves
+[14:17:01] Fairfit Furniture Company's turn - considering trades...
+[14:17:01] Fairfit Furniture Company: ⚡ No trading opportunities (cash: 31% - dice roll still mandatory)
+[14:17:01] Fairfit Furniture Company completes trading phase - MANDATORY dice roll follows
+[14:17:01] 🎲 Fairfit Furniture Company ROLLED 6 - Fairfit Furniture Company traveller moves
+[14:17:01] Fairfit Furniture Company's turn - considering trades...
+[14:17:01] Fairfit Furniture Company: ⚡ No trading opportunities (cash: 31% - dice roll still mandatory)
+[14:17:01] Fairfit Furniture Company completes trading phase - MANDATORY dice roll follows
+[14:17:01] 🎲 Fairfit Furniture Company ROLLED 1 - Easygoing Engineering Co. traveller moves
+[14:17:01] Fairfit Furniture Company's turn - considering trades...
+[14:17:01] Fairfit Furniture Company: ⚡ No trading opportunities (cash: 31% - dice roll still mandatory)
+[14:17:01] Fairfit Furniture Company completes trading phase - MANDATORY dice roll follows
+[14:17:01] 🎲 Fairfit Furniture Company ROLLED 6 - Fairfit Furniture Company traveller moves
+[14:17:02] Fairfit Furniture Company's turn - considering trades...
+[14:17:02] Fairfit Furniture Company: ⚡ No trading opportunities (cash: 31% - dice roll still mandatory)
+[14:17:02] Fairfit Furniture Company completes trading phase - MANDATORY dice roll follows
+[14:17:02] 🎲 Fairfit Furniture Company ROLLED 2 - Diggers Diamond Mines traveller moves
+[14:17:02] Fairfit Furniture Company traveler moves 6 spaces from £100 to £160
+[14:17:02] Fairfit Furniture Company traveler now at £160 - turn continues normally
+[14:17:02] RULE VIOLATION: Round started during turn - this should not happen
+[14:17:02] CRITICAL ERROR: Round started during mandatory dice phase
+[14:17:02] Fairfit Furniture Company traveler moves 6 spaces from £160 to £220
+[14:17:02] 🛑 Fairfit Furniture Company reached special cells above £200 (position: £220) - ROUND ENDS! 🛑
+[14:17:02] Rule 11: Traveller reached top area - processing dividends immediately
+[14:17:02] RULE VIOLATION: Round started during turn - this should not happen
+[14:17:02] CRITICAL ERROR: Round started during mandatory dice phase
+[14:17:02] Easygoing Engineering Co. traveler moves 1 spaces from £100 to £110
+[14:17:02] Easygoing Engineering Co. hit M marker at £110 - moving to Market News
+[14:17:02] RULE VIOLATION: Round started during turn - this should not happen
+[14:17:02] CRITICAL ERROR: Round started during mandatory dice phase
+[14:17:02] Fairfit Furniture Company traveler moves 6 spaces from £220 to £280
+[14:17:02] 🛑 Fairfit Furniture Company reached special cells above £200 (position: £280) - ROUND ENDS! 🛑
+[14:17:02] Rule 11: Traveller reached top area - processing dividends immediately
+[14:17:02] RULE VIOLATION: Round started during turn - this should not happen
+[14:17:02] CRITICAL ERROR: Round started during mandatory dice phase
+[14:17:02] Diggers Diamond Mines traveler moves 2 spaces from £100 to £120
+[14:17:02] Diggers Diamond Mines traveler now at £120 - turn continues normally
+[14:17:02] CRITICAL ERROR: Round started during mandatory dice phase
+[14:17:02] CRITICAL ERROR: Round started during mandatory dice phase
+[14:17:02] CRITICAL ERROR: Round started during mandatory dice phase
+[14:17:03] CRITICAL ERROR: Round started during mandatory dice phase
+[14:17:03] Round continues - next turn: Atomic Airways Company
+[14:17:03] Atomic Airways Company's turn - considering trades...
+[14:17:03] === ROUND END: Fairfit Furniture Company at £220 ===
+[14:17:03] Top of board reached (£200+) - £20 dividend, parent moves up 2 spaces
+[14:17:03] === PAYING DIVIDENDS ===
+[14:17:03] Reason: Top of board reached (£200+)
+[14:17:03] Amount: £20 per 100 shares of Fairfit Furniture Company
+[14:17:03] 💰 Fairfit Furniture Company receives £40 (2 shares × £20)
+[14:17:03] Total dividends paid: £40
+[14:17:03] 📈 Fairfit Furniture Company parent peg moves up: £100 → £120
+[14:17:03] 🔄 Fairfit Furniture Company traveler returns to parent peg at £120
+[14:17:03] 🔄 RULE 11: Resetting ALL traveler pegs to parent pegs
+[14:17:03] 🔄 Atomic Airways Company traveler: £100 → £100 (parent)
+[14:17:03] 🔄 Easygoing Engineering Co. traveler: £130 → £100 (parent)
+[14:17:03] 🔄 Diggers Diamond Mines traveler: £120 → £100 (parent)
+[14:17:03] Easygoing Engineering Co. triggered Market News
+[14:17:03] === ROUND END: Fairfit Furniture Company at £280 ===
+[14:17:03] Top of board reached (£200+) - £20 dividend, parent moves up 2 spaces
+[14:17:03] === PAYING DIVIDENDS ===
+[14:17:03] Reason: Top of board reached (£200+)
+[14:17:03] Amount: £20 per 100 shares of Fairfit Furniture Company
+[14:17:03] 💰 Fairfit Furniture Company receives £40 (2 shares × £20)
+[14:17:03] Total dividends paid: £40
+[14:17:03] 📈 Fairfit Furniture Company parent peg moves up: £120 → £140
+[14:17:03] 🔄 Fairfit Furniture Company traveler returns to parent peg at £140
+[14:17:03] 🔄 RULE 11: Resetting ALL traveler pegs to parent pegs
+[14:17:03] 🔄 Atomic Airways Company traveler: £100 → £100 (parent)
+[14:17:03] 🔄 Easygoing Engineering Co. traveler: £100 → £100 (parent)
+[14:17:03] 🔄 Diggers Diamond Mines traveler: £100 → £100 (parent)
+[14:17:03] Round continues - next turn: Easygoing Engineering Co.
+[14:17:03] Easygoing Engineering Co.'s turn - considering trades...
+[14:17:03] Atomic Airways Company bought Atomic Airways Company for £105 - 🚀 extreme value
+[14:17:03] Easygoing Engineering Co.'s turn - considering trades...
+[14:17:03] Easygoing Engineering Co.'s turn - considering trades...
+[14:17:04] Easygoing Engineering Co.'s turn - considering trades...
+[14:17:04] Easygoing Engineering Co.'s turn - considering trades...
+[14:17:04] Easygoing Engineering Co.: 🔄 No trading opportunities (cash: 100% - dice roll still mandatory)
+[14:17:04] === LEADERBOARD UPDATE ===
+[14:17:04] 👑 Fairfit Furniture Company: £450 (£170 cash + £280 shares)
+[14:17:04] 🥈 Easygoing Engineering Co.: £300 (£300 cash + £0 shares)
+[14:17:04] 🥉 Diggers Diamond Mines: £300 (£300 cash + £0 shares)
+[14:17:04] 4. Atomic Airways Company: £295 (£195 cash + £100 shares)
+[14:17:04] === END LEADERBOARD ===
+[14:17:04] Easygoing Engineering Co.'s turn - considering trades...
+[14:17:04] Easygoing Engineering Co.: 🔄 Sitting out trading (50% frequency - dice roll still mandatory)
+[14:17:04] Drew card: Special distribution of capital profits
+[14:17:04] Easygoing Engineering Co.'s turn - considering trades...
+[14:17:04] Easygoing Engineering Co.: 🔄 Sitting out trading (50% frequency - dice roll still mandatory)
+[14:17:04] === LEADERBOARD UPDATE ===
+[14:17:04] 👑 Fairfit Furniture Company: £450 (£170 cash + £280 shares)
+[14:17:04] 🥈 Easygoing Engineering Co.: £300 (£300 cash + £0 shares)
+[14:17:04] 🥉 Diggers Diamond Mines: £300 (£300 cash + £0 shares)
+[14:17:04] 4. Atomic Airways Company: £295 (£195 cash + £100 shares)
+[14:17:04] === END LEADERBOARD ===
+[14:17:04] Easygoing Engineering Co.'s turn - considering trades...
+[14:17:04] Easygoing Engineering Co.: 🔄 Sitting out trading (50% frequency - dice roll still mandatory)
+[14:17:04] Easygoing Engineering Co.'s turn - considering trades...
+[14:17:04] Easygoing Engineering Co.: 🔄 Sitting out trading (50% frequency - dice roll still mandatory)
+[14:17:04] Atomic Airways Company completes trading phase - MANDATORY dice roll follows
+[14:17:04] 🎲 Atomic Airways Company ROLLED 2 - Fairfit Furniture Company traveller moves
+[14:17:04] Easygoing Engineering Co.'s turn - considering trades...
+[14:17:04] Easygoing Engineering Co.: 🔄 Sitting out trading (50% frequency - dice roll still mandatory)
+[14:17:04] Easygoing Engineering Co.'s turn - considering trades...
+[14:17:04] Easygoing Engineering Co.: 🔄 Sitting out trading (50% frequency - dice roll still mandatory)
+[14:17:05] Easygoing Engineering Co.'s turn - considering trades...
+[14:17:05] Easygoing Engineering Co.: 🔄 No trading opportunities (cash: 100% - dice roll still mandatory)
+[14:17:05] Easygoing Engineering Co.'s turn - considering trades...
+[14:17:05] Easygoing Engineering Co.: 🔄 Sitting out trading (50% frequency - dice roll still mandatory)
+[14:17:05] Easygoing Engineering Co. completes trading phase - MANDATORY dice roll follows
+[14:17:05] 🎲 Easygoing Engineering Co. ROLLED 4 - Atomic Airways Company traveller moves
+[14:17:05] Fairfit Furniture Company traveler moves 2 spaces from £140 to £160
+[14:17:05] Fairfit Furniture Company traveler now at £160 - turn continues normally
+[14:17:05] NEW ROUND STARTS - first turn: Diggers Diamond Mines
+[14:17:05] === ROUND COMPLETE ===
+[14:17:05] Diggers Diamond Mines's turn - considering trades...
+[14:17:05] Easygoing Engineering Co.: 🔄 Sitting out trading (50% frequency - dice roll still mandatory)
+[14:17:05] Easygoing Engineering Co. completes trading phase - MANDATORY dice roll follows
+[14:17:05] 🎲 Easygoing Engineering Co. ROLLED 2 - Fairfit Furniture Company traveller moves
+[14:17:05] Diggers Diamond Mines's turn - considering trades...
+[14:17:05] Easygoing Engineering Co.: 🔄 Sitting out trading (50% frequency - dice roll still mandatory)
+[14:17:05] Easygoing Engineering Co. completes trading phase - MANDATORY dice roll follows
+[14:17:05] 🎲 Easygoing Engineering Co. ROLLED 3 - Fairfit Furniture Company traveller moves
+[14:17:05] NEW ROUND STARTS - first turn: Fairfit Furniture Company
+[14:17:05] === ROUND COMPLETE ===
+[14:17:05] Fairfit Furniture Company's turn - considering trades...
+[14:17:05] Easygoing Engineering Co.: 🔄 No trading opportunities (cash: 100% - dice roll still mandatory)
+[14:17:05] Easygoing Engineering Co. completes trading phase - MANDATORY dice roll follows
+[14:17:05] 🎲 Easygoing Engineering Co. ROLLED 2 - Atomic Airways Company traveller moves
+[14:17:05] Fairfit Furniture Company's turn - considering trades...
+[14:17:05] Easygoing Engineering Co.: 🔄 Sitting out trading (50% frequency - dice roll still mandatory)
+[14:17:05] Easygoing Engineering Co. completes trading phase - MANDATORY dice roll follows
+[14:17:05] 🎲 Easygoing Engineering Co. ROLLED 3 - Fairfit Furniture Company traveller moves
+[14:17:05] Atomic Airways Company traveler moves 4 spaces from £100 to £140
+[14:17:05] Atomic Airways Company traveler now at £140 - turn continues normally
+[14:17:05] RULE VIOLATION: Round started during turn - this should not happen
+[14:17:05] CRITICAL ERROR: Round started during mandatory dice phase
+[14:17:05] Fairfit Furniture Company traveler moves 2 spaces from £160 to £180
+[14:17:05] Fairfit Furniture Company traveler now at £180 - turn continues normally
+[14:17:05] RULE VIOLATION: Round started during turn - this should not happen
+[14:17:05] Fairfit Furniture Company traveler moves 3 spaces from £180 to £210
+[14:17:05] 🛑 Fairfit Furniture Company reached special cells above £200 (position: £210) - ROUND ENDS! 🛑
+[14:17:05] Rule 11: Traveller reached top area - processing dividends immediately
+[14:17:05] CRITICAL ERROR: Round started during mandatory dice phase
+[14:17:06] RULE VIOLATION: Round started during turn - this should not happen
+[14:17:06] CRITICAL ERROR: Round started during mandatory dice phase
+[14:17:06] Atomic Airways Company traveler moves 2 spaces from £140 to £160
+[14:17:06] Atomic Airways Company traveler now at £160 - turn continues normally
+[14:17:06] RULE VIOLATION: Round started during turn - this should not happen
+[14:17:06] CRITICAL ERROR: Round started during mandatory dice phase
+[14:17:06] Fairfit Furniture Company traveler moves 3 spaces from £210 to £240
+[14:17:06] 🛑 Fairfit Furniture Company reached special cells above £200 (position: £240) - ROUND ENDS! 🛑
+[14:17:06] Rule 11: Traveller reached top area - processing dividends immediately
+[14:17:06] Round continues - next turn: Atomic Airways Company
+[14:17:06] Atomic Airways Company's turn - considering trades...
+[14:17:06] Easygoing Engineering Co. completes trading phase - MANDATORY dice roll follows
+[14:17:06] 🎲 Easygoing Engineering Co. ROLLED 4 - Easygoing Engineering Co. traveller moves
+[14:17:06] Atomic Airways Company's turn - considering trades...
+[14:17:06] Easygoing Engineering Co. completes trading phase - MANDATORY dice roll follows
+[14:17:06] 🎲 Easygoing Engineering Co. ROLLED 2 - Easygoing Engineering Co. traveller moves
+[14:17:06] Atomic Airways Company's turn - considering trades...
+[14:17:06] Easygoing Engineering Co. completes trading phase - MANDATORY dice roll follows
+[14:17:06] 🎲 Easygoing Engineering Co. ROLLED 6 - Diggers Diamond Mines traveller moves
+[14:17:06] Atomic Airways Company's turn - considering trades...
+[14:17:06] Easygoing Engineering Co. completes trading phase - MANDATORY dice roll follows
+[14:17:06] 🎲 Easygoing Engineering Co. ROLLED 5 - Atomic Airways Company traveller moves
+[14:17:06] Round continues - next turn: Easygoing Engineering Co.
+[14:17:06] Easygoing Engineering Co.'s turn - considering trades...
+[14:17:06] Atomic Airways Company bought Atomic Airways Company for £105 - 🚀 extreme value, momentum
+[14:17:06] Easygoing Engineering Co. traveler moves 4 spaces from £100 to £140
+[14:17:06] Easygoing Engineering Co. traveler now at £140 - turn continues normally
+[14:17:06] Round continues - next turn: Diggers Diamond Mines
+[14:17:06] Diggers Diamond Mines's turn - considering trades...
+[14:17:06] Atomic Airways Company: 🚀 No trading opportunities (cash: 31% - dice roll still mandatory)
+[14:17:06] Easygoing Engineering Co. traveler moves 2 spaces from £140 to £160
+[14:17:06] Easygoing Engineering Co. traveler now at £160 - turn continues normally
+[14:17:06] === ROUND END: Fairfit Furniture Company at £210 ===
+[14:17:06] Top of board reached (£200+) - £20 dividend, parent moves up 2 spaces
+[14:17:06] === PAYING DIVIDENDS ===
+[14:17:06] Reason: Top of board reached (£200+)
+[14:17:06] Amount: £20 per 100 shares of Fairfit Furniture Company
+[14:17:06] 💰 Fairfit Furniture Company receives £40 (2 shares × £20)
+[14:17:06] Total dividends paid: £40
+[14:17:06] 📈 Fairfit Furniture Company parent peg moves up: £140 → £160
+[14:17:06] 🔄 Fairfit Furniture Company traveler returns to parent peg at £160
+[14:17:06] 🔄 RULE 11: Resetting ALL traveler pegs to parent pegs
+[14:17:06] 🔄 Atomic Airways Company traveler: £160 → £100 (parent)
+[14:17:06] 🔄 Easygoing Engineering Co. traveler: £160 → £100 (parent)
+[14:17:06] 🔄 Diggers Diamond Mines traveler: £100 → £100 (parent)
+[14:17:07] RULE VIOLATION: Round started during turn - this should not happen
+[14:17:07] Diggers Diamond Mines traveler moves 6 spaces from £100 to £160
+[14:17:07] Diggers Diamond Mines traveler now at £160 - turn continues normally
+[14:17:07] Round continues - next turn: Fairfit Furniture Company
+[14:17:07] Fairfit Furniture Company's turn - considering trades...
+[14:17:07] Atomic Airways Company: 🚀 No trading opportunities (cash: 31% - dice roll still mandatory)
+[14:17:07] Atomic Airways Company traveler moves 5 spaces from £100 to £150
+[14:17:07] Atomic Airways Company hit M marker at £150 - moving to Market News
+[14:17:07] === ROUND END: Fairfit Furniture Company at £240 ===
+[14:17:07] Top of board reached (£200+) - £20 dividend, parent moves up 2 spaces
+[14:17:07] === PAYING DIVIDENDS ===
+[14:17:07] Reason: Top of board reached (£200+)
+[14:17:07] Amount: £20 per 100 shares of Fairfit Furniture Company
+[14:17:07] 💰 Fairfit Furniture Company receives £40 (2 shares × £20)
+[14:17:07] Total dividends paid: £40
+[14:17:07] 📈 Fairfit Furniture Company parent peg moves up: £160 → £180
+[14:17:07] 🔄 Fairfit Furniture Company traveler returns to parent peg at £180
+[14:17:07] 🔄 RULE 11: Resetting ALL traveler pegs to parent pegs
+[14:17:07] 🔄 Atomic Airways Company traveler: £130 → £100 (parent)
+[14:17:07] 🔄 Easygoing Engineering Co. traveler: £100 → £100 (parent)
+[14:17:07] 🔄 Diggers Diamond Mines traveler: £160 → £100 (parent)
+[14:17:07] 🎉 Fairfit Furniture Company (⚡ Day Trader) WINS with £610 total wealth!
+[14:17:07] Cash: £250 | Shares: £360 | Total: £610
+[14:17:07] Auto-play stopped
+[14:17:11] RULE VIOLATION: Round started during turn - this should not happen
+[14:17:11] RULE VIOLATION: Round started during turn - this should not happen
+[14:17:11] RULE VIOLATION: Round started during turn - this should not happen
+[14:17:11] CRITICAL ERROR: Round started during mandatory dice phase
+[14:17:11] Round continues - next turn: Atomic Airways Company
+[14:17:11] Atomic Airways Company completes trading phase - MANDATORY dice roll follows
+[14:17:11] 🎲 Atomic Airways Company ROLLED 4 - Easygoing Engineering Co. traveller moves
+[14:17:11] Round continues - next turn: Easygoing Engineering Co.
+[14:17:11] === LEADERBOARD UPDATE ===
+[14:17:11] 👑 Fairfit Furniture Company: £610 (£250 cash + £360 shares)
+[14:17:11] 🥈 Easygoing Engineering Co.: £300 (£300 cash + £0 shares)
+[14:17:11] 🥉 Diggers Diamond Mines: £300 (£300 cash + £0 shares)
+[14:17:11] 4. Atomic Airways Company: £290 (£90 cash + £200 shares)
+[14:17:11] === END LEADERBOARD ===
+[14:17:11] Round continues - next turn: Diggers Diamond Mines
+[14:17:11] Atomic Airways Company completes trading phase - MANDATORY dice roll follows
+[14:17:11] 🎲 Atomic Airways Company ROLLED 6 - Easygoing Engineering Co. traveller moves
+[14:17:11] Atomic Airways Company triggered Market News
+[14:17:11] NEW ROUND STARTS - first turn: Fairfit Furniture Company
+[14:17:11] === ROUND COMPLETE ===
+[14:17:11] Easygoing Engineering Co. traveler moves 4 spaces from £100 to £140
+[14:17:11] Easygoing Engineering Co. traveler now at £140 - turn continues normally
+[14:17:11] Easygoing Engineering Co. traveler moves 6 spaces from £140 to £200
+[14:17:11] 🛑 Easygoing Engineering Co. reached special cells above £200 (position: £200) - ROUND ENDS! 🛑
+[14:17:11] Rule 11: Traveller reached top area - processing dividends immediately
+[14:17:12] Atomic Airways Company traveler retreats 6 spaces
+[14:17:12] Drew card: Large wage increase
+[14:17:12] Round continues - next turn: Atomic Airways Company
+[14:17:12] === ROUND END: Easygoing Engineering Co. at £200 ===
+[14:17:12] Top of board reached (£200+) - £20 dividend, parent moves up 2 spaces
+[14:17:12] === PAYING DIVIDENDS ===
+[14:17:12] Reason: Top of board reached (£200+)
+[14:17:12] Amount: £20 per 100 shares of Easygoing Engineering Co.
+[14:17:12] No dividends paid - no shareholders own Easygoing Engineering Co. stock
+[14:17:12] 📈 Easygoing Engineering Co. parent peg moves up: £100 → £120
+[14:17:12] 🔄 Easygoing Engineering Co. traveler returns to parent peg at £120
+[14:17:12] 🔄 RULE 11: Resetting ALL traveler pegs to parent pegs
+[14:17:12] 🔄 Fairfit Furniture Company traveler: £180 → £180 (parent)
+[14:17:12] 🔄 Atomic Airways Company traveler: £40 → £100 (parent)
+[14:17:12] 🔄 Diggers Diamond Mines traveler: £100 → £100 (parent)
+[14:17:12] 🎉 Fairfit Furniture Company (⚡ Day Trader) WINS with £610 total wealth!
+[14:17:12] Cash: £250 | Shares: £360 | Total: £610

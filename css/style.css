@@ -1,0 +1,560 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: auto;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+    gap: 20px;
+    padding: 20px;
+}
+
+.header {
+    grid-column: 1 / -1;
+    text-align: center;
+    background: rgba(255, 215, 0, 0.1);
+    border: 3px solid gold;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    color: gold;
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.header .subtitle {
+    color: #e2e8f0;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.main-board {
+    background: #1a1a2e;
+    border: 4px solid #2d3748;
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.board-title {
+    text-align: center;
+    color: #fbbf24;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.flutter-board {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    background: #0f172a;
+    border: 3px solid #374151;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.lane-header {
+    grid-row: 1;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 5px;
+    border-radius: 8px 8px 0 0;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    font-size: 0.9rem;
+}
+
+.yellow-lane { background: linear-gradient(135deg, #fbbf24, #f59e0b); }
+.red-lane { background: linear-gradient(135deg, #ef4444, #dc2626); }
+.blue-lane { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.price-column { background: linear-gradient(135deg, #f8fafc, #e2e8f0); color: #1f2937; font-weight: bold; }
+.green-lane { background: linear-gradient(135deg, #10b981, #059669); }
+.black-lane { background: linear-gradient(135deg, #374151, #1f2937); }
+.white-lane { background: linear-gradient(135deg, #f8fafc, #e2e8f0); color: #1f2937; }
+
+.board-cell {
+    min-height: 45px;
+    border: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.price-cell {
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    color: #1f2937;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bankrupt-cell {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    font-weight: bold;
+}
+
+.market-news-cell {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    color: white;
+    font-weight: bold;
+}
+
+.price-cell.market-news {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    color: white;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+.payout-cell {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    font-weight: bold;
+}
+
+.slump-cell {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    color: white;
+    font-weight: bold;
+}
+
+.player-peg {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(0, -50%);
+    z-index: 12;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    cursor: pointer;
+}
+
+.traveler-peg {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translate(0, -50%);
+    z-index: 15;
+    background: #fff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+
+.traveler-peg.special-cell {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #ff0000;
+    background: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    z-index: 15;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    animation: pulse 2s infinite;
+}
+
+.player-peg.special-cell {
+    border: 3px solid #ffffff;
+    font-weight: bold;
+    z-index: 14;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes pulse {
+    0% { transform: translate(0, -50%) scale(1); }
+    50% { transform: translate(0, -50%) scale(1.1); }
+    100% { transform: translate(0, -50%) scale(1); }
+}
+
+.peg-yellow { background: #f59e0b; }
+.peg-red { background: #dc2626; }
+.peg-blue { background: #2563eb; }
+.peg-green { background: #059669; }
+.peg-black { background: #1f2937; }
+.peg-white { background: #f8fafc; color: #000; }
+
+.current-prices {
+    background: rgba(0,0,0,0.8);
+    border: 2px solid #fbbf24;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.current-prices h3 {
+    color: #fbbf24;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.price-row:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.price-row.disabled {
+    opacity: 0.4;
+    background: rgba(255, 0, 0, 0.1);
+}
+
+.price-color {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    margin-right: 8px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: rgba(0,0,0,0.3);
+    border: 2px solid #4b5563;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.dice-section {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+    border: 2px solid #a855f7;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.dice-section h3 {
+    color: #fbbf24;
+    margin-bottom: 15px;
+}
+
+.dice-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.dice {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 2px solid #374151;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1f2937;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.color-dice {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.roll-btn {
+    background: #fbbf24;
+    color: #1f2937;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.roll-btn:hover {
+    background: #f59e0b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
+}
+
+.players-section {
+    background: linear-gradient(135deg, #059669, #047857);
+    border: 2px solid #10b981;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.players-section h3 {
+    color: #fbbf24;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.player-info {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.player-info:hover {
+    background: rgba(0,0,0,0.5);
+    border-color: rgba(255,255,255,0.4);
+}
+
+.player-info.current-player {
+    border-color: #fbbf24;
+    background: rgba(251, 191, 36, 0.1);
+}
+
+.player-info.winning-player {
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.15);
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+}
+
+.player-info.near-win {
+    border-color: #f59e0b;
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.player-info.disabled {
+    opacity: 0.4;
+    background: rgba(255,0,0,0.1);
+    border-color: rgba(255,0,0,0.3);
+}
+
+.player-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.player-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.player-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    font-size: 0.85rem;
+}
+
+.personality-indicator {
+    font-size: 0.7rem;
+    color: #a855f7;
+    font-style: italic;
+    margin-top: 2px;
+}
+
+.share-holdings {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.holdings-title {
+    font-size: 0.75rem;
+    color: #d1d5db;
+    margin-bottom: 4px;
+}
+
+.holdings-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.share-box {
+    width: 24px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.share-box:hover {
+    transform: scale(1.1);
+}
+
+.no-holdings {
+    font-size: 0.7rem;
+    color: #9ca3af;
+    font-style: italic;
+}
+
+.market-news-section {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    border: 2px solid #a855f7;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.market-news-section h3 {
+    color: #fbbf24;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.current-card {
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+.draw-card-btn {
+    background: #8b5cf6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.draw-card-btn:hover {
+    background: #7c3aed;
+    transform: translateY(-2px);
+}
+
+.game-controls {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    border: 2px solid #f87171;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.game-controls h3 {
+    color: #fbbf24;
+    margin-bottom: 15px;
+}
+
+.control-btn {
+    background: #1f2937;
+    color: #fff;
+    border: 1px solid #4b5563;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.control-btn:hover {
+    background: #374151;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 1200px) {
+    .game-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    
+    .flutter-board {
+        grid-template-columns: 30px repeat(7, 1fr) 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .flutter-board {
+        grid-template-columns: 25px repeat(7, 1fr) 25px;
+    }
+    
+    .board-cell {
+        min-height: 35px;
+        font-size: 0.7rem;
+    }
+    
+    .player-peg {
+        width: 20px;
+        height: 20px;
+        font-size: 0.6rem;
+    }
+} 

@@ -1,0 +1,22 @@
+{
+    "id": "conservativeInvestor",
+    "name": "Conservative Investor",
+    "description": "Focuses on capital preservation with steady, low-risk growth",
+    "riskTolerance": 0.3,
+    "aggressiveness": 0.2,
+    "diversificationPreference": 0.8,
+    "cashReserveTarget": 0.4,
+    "tradingFrequency": 0.4,
+    "priceThresholds": {
+        "buyBelow": 90,
+        "sellAbove": 150,
+        "panicSellAt": 180,
+        "bargainBuyAt": 70
+    },
+    "dividendFocus": 0.8,
+    "momentumTrading": 0.1,
+    "contrarian": 0.2,
+    "maxPositionSize": 0.3,
+    "stopLossThreshold": 0.15,
+    "emoji": "🛡️"
+} 

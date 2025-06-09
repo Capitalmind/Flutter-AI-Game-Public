@@ -1,0 +1,22 @@
+{
+    "id": "contrarian",
+    "name": "Contrarian Investor",
+    "description": "Buys when others sell, sells when others buy - opposite of crowd",
+    "riskTolerance": 0.7,
+    "aggressiveness": 0.6,
+    "diversificationPreference": 0.5,
+    "cashReserveTarget": 0.3,
+    "tradingFrequency": 0.5,
+    "priceThresholds": {
+        "buyBelow": 80,
+        "sellAbove": 160,
+        "panicSellAt": 50,
+        "bargainBuyAt": 60
+    },
+    "dividendFocus": 0.4,
+    "momentumTrading": 0.2,
+    "contrarian": 0.9,
+    "maxPositionSize": 0.5,
+    "stopLossThreshold": 0.1,
+    "emoji": "🔄"
+} 
