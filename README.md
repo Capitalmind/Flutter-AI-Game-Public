@@ -6,7 +6,6 @@
 ![Year](https://img.shields.io/badge/Original-1966-green?style=for-the-badge)
 ![AI](https://img.shields.io/badge/AI-Machine%20Learning-orange?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Active%20Development-red?style=for-the-badge)
-![Architecture](https://img.shields.io/badge/Architecture-Modular-purple?style=for-the-badge)
 
 **An authentic digital recreation of the 1966 J.W. Spear & Sons "Flutter" board game, designed as a comprehensive AI/ML training platform for financial decision-making algorithms.**
 
@@ -17,34 +16,6 @@
 ## 🎯 **Project Overview**
 
 This project is a faithful digital recreation of the classic 1966 "Flutter - Stock Exchange Game" by J.W. Spear & Sons, transformed into a sophisticated **machine learning simulation platform**. The game serves as a controlled environment for training and testing AI agents in financial decision-making, risk assessment, and strategic trading scenarios.
-
-## 🏗️ **Modern Modular Architecture**
-
-**✨ Recently Restructured (June 2025)**: The Flutter simulation has been completely restructured from a monolithic HTML file into a **professional, modular web application architecture**:
-
-### **📁 Organized Structure**
-```
-flutter-game-restructured/
-├── config/personalities/     # 11 AI personality configurations (JSON)
-├── css/style.css            # Complete extracted styling (9.7KB)
-├── js/game.js              # Main game logic (110KB, 2,224 lines)
-├── js/game_recorder.js     # ML recording system (17KB)
-└── index.html              # Clean HTML structure (5.3KB)
-```
-
-### **🔧 Technical Improvements**
-- **Separation of Concerns**: HTML, CSS, and JavaScript properly separated
-- **Modular Configuration**: AI personalities easily customizable via JSON files
-- **Enhanced Maintainability**: Clean codebase structure for easy modifications
-- **Professional Development Standards**: Ready for production deployment
-- **Preserved Functionality**: All ML recording and game features maintained
-
-### **🎯 Benefits of Restructuring**
-- **Easy Customization**: Modify AI personalities without touching core code
-- **Scalable Development**: Add new features with clean separation
-- **Better Debugging**: Isolated components for easier troubleshooting
-- **Team Collaboration**: Clear structure for multiple developers
-- **Performance Optimization**: Optimized loading and execution
 
 ## 🏛️ **Historical Context**
 
@@ -72,9 +43,17 @@ flutter-game-restructured/
 - **Quantifiable Performance**: Every decision has immediate financial consequences
 - **Reproducible Results**: Deterministic rules allow for consistent training scenarios
 
-## 🧠 **AI Personality System**
+## 🧠 **Advanced AI Competitive Intelligence System**
 
-The simulation features **10 distinct AI personalities**, each modeling different investment strategies:
+The simulation features **16 distinct AI personalities** with **sophisticated competitive intelligence** and a **dynamic tournament evolution system**. Each AI employs advanced game theory concepts including opponent analysis, strategic memory, multi-move planning, market manipulation, and defensive tactics.
+
+### **🎯 Competitive Intelligence Features:**
+- **Real-time Opponent Analysis**: Portfolio tracking, behavioral prediction, threat assessment
+- **Strategic Memory Systems**: Tournament history, performance patterns, elimination tracking  
+- **Multi-Move Lookahead**: Advanced strategic planning with value optimization
+- **Market Manipulation**: Pump/dump strategies, influence campaigns, price discovery
+- **Defensive Tactics**: Leader blocking, position disruption, competitive interference
+- **Game Theory Integration**: Nash equilibrium analysis, information asymmetry exploitation
 
 | Personality | Strategy | Risk Level | Trading Frequency |
 |-------------|----------|------------|-------------------|
@@ -89,12 +68,13 @@ The simulation features **10 distinct AI personalities**, each modeling differen
 | 🌊 **Trend Follower** | Market momentum | Medium (65%) | Medium (55%) |
 | 🎲 **Random Trader** | Chaos theory | Variable | Variable |
 
-### **🎛️ Easy AI Customization**
-With the new modular architecture, AI personalities are now **fully configurable** via JSON files:
-- **Risk Parameters**: Customize risk tolerance, aggressiveness, trading frequency
-- **Price Thresholds**: Set buy/sell trigger points for each personality
-- **Strategy Focus**: Adjust dividend focus, momentum trading, contrarian behavior
-- **Portfolio Management**: Configure cash reserves, position sizing, diversification preferences
+### **🏆 Tournament Evolution System**
+- **First Game**: Completely random personality selection from all 16 available
+- **Subsequent Games**: Worst performer eliminated and replaced with new challenger
+- **Evolution Process**: Continues until only 2 strongest personalities remain
+- **Session Persistence**: Tournament state maintained across browser session
+- **Performance Tracking**: Complete elimination history and statistics
+- **Live Updates**: Real-time console logging of eliminations and new challengers
 
 ## 📊 **Machine Learning Applications**
 
@@ -129,11 +109,13 @@ With the new modular architecture, AI personalities are now **fully configurable
 
 ### **Technical Features**
 - ✅ **Real-Time Visualization**: Live board updates with peg positioning
+- ✅ **🏆 Tournament Evolution System**: Dynamic elimination-based personality competition
 - ✅ **Comprehensive Logging**: Detailed action history for analysis
 - ✅ **Configurable Speed**: From 0.125s to 5s per turn for different testing needs
-- ✅ **Multi-Company Support**: 3-6 players with dynamic personality assignment
+- ✅ **Multi-Company Support**: 3-6 players with tournament-aware personality assignment
 - ✅ **🎯 ML Recording System**: Complete data capture with export capabilities
 - ✅ **Research Analytics**: Live statistics, comprehensive reports, performance tracking
+- ✅ **Session Persistence**: Tournament state maintained across browser refreshes
 
 ## 📈 **Research Applications**
 
@@ -154,18 +136,15 @@ With the new modular architecture, AI personalities are now **fully configurable
 
 ## 🔧 **Technical Architecture**
 
-### **Frontend (Restructured)**
-- **Modular HTML5/CSS3/JavaScript**: Clean separation of concerns for maintainability
-- **External Stylesheets**: Organized CSS for easy customization and optimization
-- **Modular JavaScript**: Separated game logic and ML recording systems
+### **Frontend**
+- **Pure HTML5/CSS3/JavaScript**: No external dependencies for maximum compatibility
 - **Grid-Based Layout**: Authentic board representation with responsive design
 - **Real-Time Updates**: Dynamic peg positioning and status displays
 
 ### **AI Engine**
-- **JSON-Configurable Personalities**: Easy modification without code changes
-- **Modular Decision Framework**: Extensible logic for complex trading decisions
+- **Modular Personality System**: Easy addition of new trading strategies
+- **Decision Framework**: Extensible logic for complex trading decisions
 - **Performance Tracking**: Built-in metrics for strategy evaluation
-- **Config-Driven Behavior**: AI personalities stored in separate configuration files
 
 ### **Data Management & ML Recording**
 - **Game State Persistence**: Complete game state tracking
@@ -177,31 +156,22 @@ With the new modular architecture, AI personalities are now **fully configurable
 
 ## 🎯 **Getting Started**
 
-### **Quick Start (Restructured Version)**
-1. **Download/Clone**: Get the restructured project with modular architecture
-2. **Open the Game**: Load `index.html` in any modern browser
-3. **Customize AI**: Modify personalities in `config/personalities/` folder
-4. **Start New Game**: Click "New Game" and select number of companies (3-6)
-5. **Set Win Target**: Choose from £600 (quick) to £5000+ (marathon)
-6. **Watch AI Trade**: Enable auto-play to observe AI personalities in action
-7. **Analyze Results**: Study the console logs for detailed decision tracking
-8. **Export ML Data**: Use built-in tools to download training datasets
-
-### **Development Setup**
-- **No Build Process**: Pure HTML/CSS/JS for immediate development
-- **Configuration**: Modify AI personalities via JSON files in `config/personalities/`
-- **Styling**: Update `css/style.css` for visual customizations
-- **Game Logic**: Extend functionality in `js/game.js`
-- **ML Recording**: Enhance data capture in `js/game_recorder.js`
+1. **Open the Game**: Load `flutter_game_with_personalities_4.html` in any modern browser
+2. **Start New Game**: Click "New Game" and select number of companies (3-6)
+3. **Set Win Target**: Choose from £600 (quick) to £5000+ (marathon)
+4. **Watch AI Trade**: Enable auto-play to observe AI personalities in action
+5. **Analyze Results**: Study the console logs for detailed decision tracking
 
 ## 📚 **Documentation**
 
-- **`GameRules.md`**: Complete 1966 game rules and mechanics
-- **`flutter_game_logic.md`**: Technical implementation specifications
-- **`PlayerStrategy.md`**: AI personality descriptions and strategies
-- **`GameCards.md`**: Market News and Insurance card effects
-- **`BoardLayout.md`**: Authentic board structure and positioning
-- **`ML_RECORDING_GUIDE.md`**: Complete guide to ML data capture system
+- **[Game Rules](GameRules.md)** - Complete 1966 game rules and mechanics
+- **[Tournament System](TOURNAMENT_SYSTEM.md)** - Dynamic elimination-based AI personality evolution system
+- **[Enhanced Personality Analysis](ENHANCED_PERSONALITY_ANALYSIS.md)** - Advanced AI competitive intelligence & game theory implementation
+- **[Player Strategy Guide](PlayerStrategy.md)** - Advanced strategies and comprehensive AI personality tactics
+- **[ML Recording Guide](ML_RECORDING_GUIDE.md)** - Machine learning data collection system
+- **[Technical Logic](flutter_game_logic.md)** - Implementation specifications
+- **[Game Cards](GameCards.md)** - Market News and Insurance card effects
+- **[Board Layout](BoardLayout.md)** - Authentic board structure and positioning
 
 ## 🔬 **Research Potential**
 
