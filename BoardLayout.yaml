@@ -1,0 +1,264 @@
+flutterGameBoard:
+  metadata:
+    totalRows: 32
+    totalColumns: 9
+    companyColumns: [2, 3, 4, 6, 7, 8]
+    priceColumn: 5
+    emptyColumns: [1, 9]
+  
+  companies:
+    - name: "FAIRFIT"
+      column: 2
+      id: "yellow"
+    - name: "ATOMIC"
+      column: 3
+      id: "red"
+    - name: "EASYGOING"
+      column: 4
+      id: "blue"
+    - name: "DIGGERS"
+      column: 6
+      id: "green"
+    - name: "BLUEBOTTLE"
+      column: 7
+      id: "black"
+    - name: "CAPTIVATING"
+      column: 8
+      id: "white"
+  
+  rows:
+    - row: 1
+      type: "header"
+      priceCell: "PRICE"
+      companyCell: "header"
+    
+    # Special Action Rows (2-11)
+    - row: 2
+      type: "payout"
+      priceCell: "20%"
+      companyCell: "dot"
+      background: "green"
+      dividendAmount: 20
+    
+    - row: 3
+      type: "slump"
+      priceCell: "SLUMP"
+      companyCell: "dot"
+      background: "orange"
+      action: "fallBack6Spaces"
+    
+    - row: 4
+      type: "payout"
+      priceCell: "10%"
+      companyCell: "dot"
+      background: "green"
+      dividendAmount: 10
+    
+    - row: 5
+      type: "payout"
+      priceCell: "10%"
+      companyCell: "dot"
+      background: "green"
+      dividendAmount: 10
+    
+    - row: 6
+      type: "slump"
+      priceCell: "SLUMP"
+      companyCell: "dot"
+      background: "orange"
+      action: "fallBack6Spaces"
+    
+    - row: 7
+      type: "payout"
+      priceCell: "10%"
+      companyCell: "dot"
+      background: "green"
+      dividendAmount: 10
+    
+    - row: 8
+      type: "payout"
+      priceCell: "5%"
+      companyCell: "dot"
+      background: "green"
+      dividendAmount: 5
+    
+    - row: 9
+      type: "payout"
+      priceCell: "5%"
+      companyCell: "dot"
+      background: "green"
+      dividendAmount: 5
+    
+    - row: 10
+      type: "payout"
+      priceCell: "5%"
+      companyCell: "dot"
+      background: "green"
+      dividendAmount: 5
+    
+    - row: 11
+      type: "marketNews"
+      priceCell: "M"
+      companyCell: "dot"
+      background: "purple"
+      action: "drawMarketCard"
+    
+    # Price Rows (12-31)
+    - row: 12
+      type: "price"
+      priceCell: "200"
+      companyCell: "dot"
+      value: 200
+      special: "roundEnd"
+    
+    - row: 13
+      type: "price"
+      priceCell: "190"
+      companyCell: "dot"
+      value: 190
+    
+    - row: 14
+      type: "price"
+      priceCell: "180"
+      companyCell: "dot"
+      value: 180
+    
+    - row: 15
+      type: "price"
+      priceCell: "170"
+      companyCell: "dot"
+      value: 170
+    
+    - row: 16
+      type: "price"
+      priceCell: "160"
+      companyCell: "dot"
+      value: 160
+    
+    - row: 17
+      type: "price"
+      priceCell: "150"
+      companyCell: "dot"
+      value: 150
+    
+    - row: 18
+      type: "price"
+      priceCell: "140"
+      companyCell: "dot"
+      value: 140
+    
+    - row: 19
+      type: "price"
+      priceCell: "130"
+      companyCell: "dot"
+      value: 130
+    
+    - row: 20
+      type: "price"
+      priceCell: "120"
+      companyCell: "dot"
+      value: 120
+    
+    - row: 21
+      type: "price"
+      priceCell: "110"
+      companyCell: "dot"
+      value: 110
+    
+    - row: 22
+      type: "price"
+      priceCell: "100 PAR"
+      companyCell: "dot"
+      value: 100
+      special: "startingPosition"
+    
+    - row: 23
+      type: "price"
+      priceCell: "90"
+      companyCell: "dot"
+      value: 90
+    
+    - row: 24
+      type: "price"
+      priceCell: "80"
+      companyCell: "dot"
+      value: 80
+    
+    - row: 25
+      type: "price"
+      priceCell: "70"
+      companyCell: "dot"
+      value: 70
+    
+    - row: 26
+      type: "price"
+      priceCell: "60"
+      companyCell: "dot"
+      value: 60
+    
+    - row: 27
+      type: "price"
+      priceCell: "50"
+      companyCell: "dot"
+      value: 50
+    
+    - row: 28
+      type: "price"
+      priceCell: "40"
+      companyCell: "dot"
+      value: 40
+    
+    - row: 29
+      type: "price"
+      priceCell: "30"
+      companyCell: "dot"
+      value: 30
+    
+    - row: 30
+      type: "price"
+      priceCell: "20"
+      companyCell: "dot"
+      value: 20
+    
+    - row: 31
+      type: "price"
+      priceCell: "10"
+      companyCell: "dot"
+      value: 10
+    
+    # Bankruptcy Row
+    - row: 32
+      type: "bankrupt"
+      priceCell: "BANKRUPT"
+      companyCell: "BANK"
+      value: 0
+      background: "red"
+      action: "eliminateCompany"
+  
+  specialActions:
+    payoutRows: [2, 4, 5, 7, 8, 9, 10]
+    slumpRows: [3, 6]
+    marketNewsRows: [11]
+    dividendAmounts:
+      row2: 20  # 20%
+      row4: 10  # 10%
+      row5: 10  # 10%
+      row7: 10  # 10%
+      row8: 5   # 5%
+      row9: 5   # 5%
+      row10: 5  # 5%
+  
+  pegPositions:
+    parentPeg:
+      left: "30%"
+      top: "50%"
+    travelerPeg:
+      left: "70%"
+      top: "10%"
+  
+  gameRules:
+    roundEndTrigger: "travelerReachesRow12OrAbove"
+    slumpEffect: "fallBack6Spaces"
+    marketNewsEffect: "drawRandomCard"
+    bankruptcyTrigger: "parentPegReachesRow32"
+    startingPosition: "row22Value100"

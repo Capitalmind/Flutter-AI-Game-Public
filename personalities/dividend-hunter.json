@@ -1,0 +1,22 @@
+{
+    "id": "dividendHunter",
+    "name": "Dividend Hunter",
+    "description": "Income-focused strategy targeting dividend-paying opportunities",
+    "riskTolerance": 0.4,
+    "aggressiveness": 0.3,
+    "diversificationPreference": 0.7,
+    "cashReserveTarget": 0.2,
+    "tradingFrequency": 0.4,
+    "priceThresholds": {
+        "buyBelow": 110,
+        "sellAbove": 170,
+        "panicSellAt": 180,
+        "bargainBuyAt": 90
+    },
+    "dividendFocus": 0.9,
+    "momentumTrading": 0.2,
+    "contrarian": 0.3,
+    "maxPositionSize": 0.35,
+    "stopLossThreshold": 0.12,
+    "emoji": "💰"
+} 

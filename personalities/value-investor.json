@@ -1,0 +1,22 @@
+{
+    "id": "valueInvestor",
+    "name": "Value Investor",
+    "description": "Patient investor seeking undervalued companies at discount prices",
+    "riskTolerance": 0.4,
+    "aggressiveness": 0.2,
+    "diversificationPreference": 0.6,
+    "cashReserveTarget": 0.35,
+    "tradingFrequency": 0.3,
+    "priceThresholds": {
+        "buyBelow": 80,
+        "sellAbove": 180,
+        "panicSellAt": 190,
+        "bargainBuyAt": 60
+    },
+    "dividendFocus": 0.7,
+    "momentumTrading": 0.1,
+    "contrarian": 0.6,
+    "maxPositionSize": 0.45,
+    "stopLossThreshold": 0.05,
+    "emoji": "💎"
+} 

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutter - Stock Trading Game (Spears 1966) - AI Personalities</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>Flutter - Stock Trading Game</h1>
+            <div class="subtitle">J.W. Spear & Sons Ltd 1966 • "AI Personality Trading System!"</div>
+        </div>
+
+        <div class="main-board">
+            <div class="board-title">🎲 Flutter Game Board</div>
+            
+            <div class="current-prices">
+                <h3>Company Stock Positions</h3>
+                <div id="company-prices"></div>
+            </div>
+
+            <div class="flutter-board" id="game-board">
+                <!-- All board cells including headers are generated dynamically -->
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="dice-section">
+                <h3>🎮 Game Controls</h3>
+                <div class="dice-container">
+                    <div class="dice" id="number-dice">6</div>
+                    <div class="color-dice yellow-lane" id="color-dice"></div>
+                </div>
+                <button class="roll-btn" id="roll-btn" onclick="rollDice()">🎲 Roll Dice</button>
+                <button class="roll-btn" id="play-pause-btn" onclick="toggleAutoPlay()" style="margin-top: 10px;">▶️ Auto Play</button>
+                <div style="margin-top: 10px; font-size: 0.9rem;">
+                    <div>Speed: <input type="range" id="speed-slider" min="125" max="5000" value="1500" oninput="updateAutoPlaySpeed()" style="width: 120px;"> <span id="speed-display">1.5s</span></div>
+                    <div style="font-size: 0.7rem; color: #a0a0a0; margin-top: 2px;">Range: 0.125s (very fast) to 5s (very slow)</div>
+                    <div>Last: <span id="last-number">6</span> | <span id="last-color">Yellow</span></div>
+                </div>
+            </div>
+
+            <div class="players-section">
+                <h3>👥 Company Players (<span id="player-count">4</span>)</h3>
+                <div id="player-list"></div>
+            </div>
+
+            <div class="market-news-section">
+                <h3>📰 Market News</h3>
+                <div class="current-card" id="current-card">
+                    <strong>Welcome to Flutter!</strong><br>
+                    AI personalities randomly assigned<br>
+                    Roll the dice to start trading
+                </div>
+                <button class="draw-card-btn" onclick="drawMarketCard()">Draw Market News Card</button>
+                <div style="margin-top: 10px; font-size: 0.85rem; text-align: center;">
+                    Cards remaining: <span id="cards-remaining">22</span><br>
+                    Insurance cards: <span id="insurance-remaining">2</span>
+                </div>
+            </div>
+
+            <div class="game-controls">
+                <h3>📝 Game Console</h3>
+                <div id="game-console" style="background: #000; color: #0f0; font-family: 'Courier New', monospace; font-size: 0.8rem; height: 150px; overflow-y: auto; padding: 10px; border-radius: 5px; border: 1px solid #333;">
+                    <div>Flutter Game Console v5.1 - Modular AI Personalities</div>
+                    <div>Initializing personality system...</div>
+                </div>
+                <div style="margin-top: 5px; text-align: center; font-size: 0.75rem;">
+                    <span id="personality-status">🔄 Loading AI personalities...</span>
+                </div>
+                <div style="margin-top: 5px; text-align: center; font-size: 0.75rem;">
+                    <span id="ml-recording-status">🎬 ML Recording: Active</span>
+                </div>
+                <div style="margin-top: 10px;">
+                    <button class="control-btn" onclick="clearConsole()">Clear Log</button>
+                    <button class="control-btn" onclick="newGame()">New Game</button>
+                    <button class="control-btn" onclick="showPersonalities()">Show AI Types</button>
+                    <button class="control-btn" onclick="buyShares()">Buy Shares</button>
+                    <button class="control-btn" onclick="sellShares()">Sell Shares</button>
+                </div>
+                <div style="margin-top: 10px;">
+                    <button class="control-btn" onclick="exportMLData()">📊 Export ML Data</button>
+                    <button class="control-btn" onclick="mlRecorder.printStats()">📈 ML Stats</button>
+                    <button class="control-btn" onclick="toggleMLRecording()">🎬 Toggle Recording</button>
+                    <button class="control-btn" onclick="generateMLReport()">📋 Generate Report</button>
+                </div>
+                <div style="margin-top: 10px; font-size: 0.8rem; text-align: center;">
+                    Target: £<span id="win-target">600</span> | Turn: <span id="current-player-name">Yellow</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ML Recording System -->
+    <script src="js/game_recorder.js"></script>
+    
+    <!-- Main Game Logic -->
+    <script src="js/game.js"></script>
+</body>
+</html> 

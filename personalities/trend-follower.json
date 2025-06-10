@@ -1,0 +1,22 @@
+{
+    "id": "trendFollower",
+    "name": "Trend Follower",
+    "description": "Follows market momentum and popular trends",
+    "riskTolerance": 0.6,
+    "aggressiveness": 0.8,
+    "diversificationPreference": 0.3,
+    "cashReserveTarget": 0.15,
+    "tradingFrequency": 0.8,
+    "priceThresholds": {
+        "buyBelow": 130,
+        "sellAbove": 180,
+        "panicSellAt": 185,
+        "bargainBuyAt": 105
+    },
+    "dividendFocus": 0.3,
+    "momentumTrading": 0.85,
+    "contrarian": 0.1,
+    "maxPositionSize": 0.55,
+    "stopLossThreshold": 0.18,
+    "emoji": "🌊"
+} 

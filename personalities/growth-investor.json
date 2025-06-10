@@ -1,0 +1,22 @@
+{
+    "id": "growthInvestor",
+    "name": "Growth Investor",
+    "description": "Focuses on companies with high growth potential, less concerned with dividends",
+    "riskTolerance": 0.7,
+    "aggressiveness": 0.7,
+    "diversificationPreference": 0.4,
+    "cashReserveTarget": 0.15,
+    "tradingFrequency": 0.7,
+    "priceThresholds": {
+        "buyBelow": 120,
+        "sellAbove": 190,
+        "panicSellAt": 195,
+        "bargainBuyAt": 95
+    },
+    "dividendFocus": 0.2,
+    "momentumTrading": 0.7,
+    "contrarian": 0.2,
+    "maxPositionSize": 0.5,
+    "stopLossThreshold": 0.22,
+    "emoji": "📈"
+} 

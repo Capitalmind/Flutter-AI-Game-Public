@@ -1,0 +1,22 @@
+{
+    "id": "dayTrader",
+    "name": "Day Trader",
+    "description": "Extremely active trader making frequent small-profit trades",
+    "riskTolerance": 0.8,
+    "aggressiveness": 0.95,
+    "diversificationPreference": 0.1,
+    "cashReserveTarget": 0.1,
+    "tradingFrequency": 0.95,
+    "priceThresholds": {
+        "buyBelow": 140,
+        "sellAbove": 160,
+        "panicSellAt": 195,
+        "bargainBuyAt": 110
+    },
+    "dividendFocus": 0.1,
+    "momentumTrading": 0.95,
+    "contrarian": 0.05,
+    "maxPositionSize": 0.7,
+    "stopLossThreshold": 0.08,
+    "emoji": "⚡"
+} 

@@ -1,0 +1,64 @@
+{
+    "personalities": [
+        {
+            "id": "conservativeInvestor",
+            "file": "conservative-investor.json",
+            "name": "Conservative Investor",
+            "emoji": "🛡️"
+        },
+        {
+            "id": "aggressiveSpeculator",
+            "file": "aggressive-speculator.json",
+            "name": "Aggressive Speculator",
+            "emoji": "🚀"
+        },
+        {
+            "id": "balancedTrader",
+            "file": "balanced-trader.json",
+            "name": "Balanced Trader",
+            "emoji": "⚖️"
+        },
+        {
+            "id": "contrarian",
+            "file": "contrarian-investor.json",
+            "name": "Contrarian Investor",
+            "emoji": "🔄"
+        },
+        {
+            "id": "dividendHunter",
+            "file": "dividend-hunter.json",
+            "name": "Dividend Hunter",
+            "emoji": "💰"
+        },
+        {
+            "id": "growthInvestor",
+            "file": "growth-investor.json",
+            "name": "Growth Investor",
+            "emoji": "📈"
+        },
+        {
+            "id": "dayTrader",
+            "file": "day-trader.json",
+            "name": "Day Trader",
+            "emoji": "⚡"
+        },
+        {
+            "id": "valueInvestor",
+            "file": "value-investor.json",
+            "name": "Value Investor",
+            "emoji": "💎"
+        },
+        {
+            "id": "trendFollower",
+            "file": "trend-follower.json",
+            "name": "Trend Follower",
+            "emoji": "🌊"
+        },
+        {
+            "id": "opportunist",
+            "file": "opportunist.json",
+            "name": "Opportunist",
+            "emoji": "��"
+        }
+    ]
+} 

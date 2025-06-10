@@ -1,0 +1,22 @@
+{
+    "id": "aggressiveSpeculator",
+    "name": "Aggressive Speculator",
+    "description": "High-risk, high-reward momentum trader seeking maximum returns",
+    "riskTolerance": 0.9,
+    "aggressiveness": 0.9,
+    "diversificationPreference": 0.2,
+    "cashReserveTarget": 0.05,
+    "tradingFrequency": 0.9,
+    "priceThresholds": {
+        "buyBelow": 130,
+        "sellAbove": 190,
+        "panicSellAt": 200,
+        "bargainBuyAt": 100
+    },
+    "dividendFocus": 0.3,
+    "momentumTrading": 0.9,
+    "contrarian": 0.1,
+    "maxPositionSize": 0.6,
+    "stopLossThreshold": 0.25,
+    "emoji": "🚀"
+} 
